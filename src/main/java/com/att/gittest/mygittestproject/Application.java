@@ -2,6 +2,7 @@ package com.att.gittest.mygittestproject;
 
 /**
  * A comment
+ * comment 2...
  *
  */
 public class Application 
