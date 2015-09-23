@@ -11,7 +11,7 @@ package com.att.gittest.mygittestproject;
 public class Application 
 {
     public static void main( String[] args )
-    // new features version2 branch
+    // new features against version2 branch...
     {
         System.out.println( "Hello World!" );
     }
