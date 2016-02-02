@@ -14,6 +14,6 @@ public class Application
     // new features against version2 branch...
     {
         System.out.println( "Hello World!" );
-        System.out.println( "done with newfeature1 changes.." );
+        System.out.println( "done with newfeature3 changes.." );
     }
 }
