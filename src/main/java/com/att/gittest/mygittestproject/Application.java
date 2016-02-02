@@ -14,5 +14,6 @@ public class Application
     // new features against version2 branch...
     {
         System.out.println( "Hello World!" );
+        System.out.println( "done with rel1.2 changes.." );
     }
 }
