@@ -1,0 +1,8 @@
+To create a new Folder:  Manage -> New Folder
+to create a new connection: 
+	New Site
+	put in Host name and User name
+	Adavanced -> Advanced -> SSH -> Authentication 
+	Under Private key file:	C:\Users\sh1986\Documents\sh1986.ppk
+	
+Manage->Save as , to choose folder
