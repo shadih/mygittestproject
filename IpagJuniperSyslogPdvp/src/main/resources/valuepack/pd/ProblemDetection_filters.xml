@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<filters xmlns="http://hp.com/uca/expert/filter">
+
+	<topFilter name="Syslog_Polling_Event">
+		<anyCondition>
+			<allCondition  tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50004/3/2,50004/1/2</fieldValue>
+				</stringFilterStatement>
+			</allCondition>		 
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator> 
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+<!-- 					<fieldValue>50002/100/55,50001/100/52,50004/1/2</fieldValue> -->
+					<fieldValue>50002/100/55,50001/100/52,50004/1/2,50004/3/2</fieldValue> 
+				</stringFilterStatement>
+			</allCondition>
+			<!--  This is for enrichment only and will not be grouped with the this problem -->
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50004/10/1</fieldValue>
+				</stringFilterStatement>
+			</allCondition>			
+		</anyCondition>
+	</topFilter>
+	    <topFilter name="RpdMplsLspProblem">
+        <allCondition tag="">          
+            <anyCondition>
+                <allCondition tag="Trigger,SubAlarm">
+                    <stringFilterStatement>
+                        <fieldName>EventKey</fieldName>
+                        <operator>isEqual</operator>
+                        <fieldValue>50004/1/7</fieldValue>
+                    </stringFilterStatement>
+                </allCondition>
+            </anyCondition>
+        </allCondition>
+    </topFilter> 
+	<topFilter name="FBSPtpProcess">	<!-- tj -->
+		<anyCondition>
+			<allCondition tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50002/100/52,50004/1/11</fieldValue>
+				</stringFilterStatement>
+<!--
+				<stringFilterStatement>
+					<fieldName>vrf-name</fieldName>
+					<operator>contains</operator>
+					<fieldValue>FBS</fieldValue>
+				</stringFilterStatement>
+				<anyCondition>
+					<stringFilterStatement>
+						<fieldName>vrf-name</fieldName>
+						<operator>contains</operator>
+						<fieldValue>VPWS</fieldValue>
+					</stringFilterStatement>
+					<stringFilterStatement>
+						<fieldName>vrf-name</fieldName>
+						<operator>contains</operator>
+						<fieldValue>L2CKT</fieldValue>
+					</stringFilterStatement>
+				</anyCondition>
+-->
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="ColdStart_Suppression">	<!-- tj -->
+		<anyCondition>
+			<allCondition tag="Trigger">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50002/100/52,50004/1/11,50001/100/61,50001/100/62,50001/100/63,50001/100/64,50001/100/65</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50002/100/58</fieldValue>
+				</stringFilterStatement>
+			</allCondition>			
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="FRU_Slot_Card_Suppression">	<!-- tj -->
+		<anyCondition>
+			<allCondition tag="Trigger">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50002/100/52,50004/1/11,50001/100/61,50001/100/62,50001/100/63,50001/100/64,50001/100/65</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/12,50003/100/13,50003/100/14,50003/100/15,50003/100/16</fieldValue>
+				</stringFilterStatement>
+			</allCondition>			
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="Ciena_OAM_FRU_Suppression">	<!-- tj -->
+		<anyCondition>
+			<allCondition tag="Trigger">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50002/100/19</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/12,50003/100/13,50003/100/14,50003/100/15,50003/100/16</fieldValue>
+				</stringFilterStatement>
+			</allCondition>			
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="Ciena_LD_FRU_SLOT">	<!-- tj -->
+		<anyCondition>
+			<allCondition tag="Trigger">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50002/100/21</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/12,50003/100/13,50003/100/14,50003/100/15,50003/100/16</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>SLOT</fieldValue>
+				</stringFilterStatement>
+			</allCondition>			
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="Ciena_LD_FRU_CARD">	<!-- tj -->
+		<anyCondition>
+			<allCondition tag="Trigger">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50002/100/21</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/12,50003/100/13,50003/100/14,50003/100/15,50003/100/16</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>CARD</fieldValue>
+				</stringFilterStatement>
+			</allCondition>			
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="Ciena_LD_Suppression">	<!-- tj -->
+		<anyCondition>
+			<allCondition  tag="Trigger">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50002/100/21</fieldValue>
+				</stringFilterStatement>
+			</allCondition>		
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50004/1/10</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+
+<!--	This correlaton has been moved to the PriSec CP
+	<topFilter name="Ciena_Syslog_OAM_PriSec">	
+		<anyCondition>
+			<allCondition  tag="Trigger,SubAlarm">
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50002/100/19,50004/1/10</fieldValue>
+				</stringFilterStatement>
+			</allCondition>		
+		</anyCondition>
+	</topFilter>
+     this correlation has been moved to the PriSec VP 
+    <topFilter name="JnxLacp">
+ 		<anyCondition>
+			<allCondition  tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/24,50004/1/10,50004/1/19,50004/1/21,50004/1/18,50004/1/20</fieldValue>
+				</stringFilterStatement>
+			</allCondition>	
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/1</fieldValue>
+				</stringFilterStatement>
+			</allCondition>			
+		</anyCondition>
+	</topFilter>
+ 	<topFilter name="SyslogLinkdown_Event">
+		<anyCondition>
+			<allCondition  tag="Trigger,Problem">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50004/1/2</fieldValue>
+				</stringFilterStatement>
+			</allCondition>		
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50004/3/2</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+-->
+<!-- 	<topFilter name="Cisco_LinkDown_Event"> -->
+<!-- 		<anyCondition> -->
+<!-- 			<allCondition  tag="Trigger,SubAlarm"> -->
+<!-- 				<stringFilterStatement> -->
+<!-- 					<fieldName>originatingManagedEntity</fieldName> -->
+<!-- 					<operator>contains</operator> -->
+<!-- 					<fieldValue>PPORT</fieldValue> -->
+<!-- 				</stringFilterStatement> -->
+<!--  				<stringFilterStatement> -->
+<!-- 					<fieldName>EventKey</fieldName> -->
+<!-- 					<operator>isEqual</operator> -->
+<!-- 					<fieldValue>50003/100/23</fieldValue> -->
+<!-- 				</stringFilterStatement> -->
+<!-- 			</allCondition>		 -->
+<!-- 			<allCondition tag="SubAlarm"> -->
+<!-- 				<stringFilterStatement> -->
+<!-- 					<fieldName>originatingManagedEntity</fieldName> -->
+<!-- 					<operator>contains</operator> -->
+<!-- 					<fieldValue>PPORT</fieldValue> -->
+<!-- 				</stringFilterStatement> -->
+<!-- 				<stringFilterStatement> -->
+<!-- 					<fieldName>EventKey</fieldName> -->
+<!-- 					<operator>isListedIn</operator>				 -->
+<!-- 					<fieldValue>50003/100/1,50003/100/23</fieldValue> -->
+<!-- 				</stringFilterStatement> -->
+<!-- 			</allCondition> -->
+<!-- 		</anyCondition> -->
+<!-- 	</topFilter> -->
+	<topFilter name="RpdRsvpBypassDown">
+		<anyCondition>
+			<allCondition  tag="Trigger, ProblemAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>TUNNEL</fieldValue>
+				</stringFilterStatement>
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50004/1/9</fieldValue>
+				</stringFilterStatement>
+			</allCondition>		
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/1,50003/100/23</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+		<topFilter name="SyslogBFDOWN_LinkDown_Event_Local">
+		<anyCondition>
+			<allCondition  tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50004/1/12,50004/1/13</fieldValue>
+				</stringFilterStatement>		
+			<stringFilterStatement>
+					<fieldName>identifier</fieldName>
+					<operator>doesNotContain</operator>
+					<fieldValue>CORR</fieldValue>
+				</stringFilterStatement>
+			</allCondition>		
+			
+			<allCondition  tag="ProblemAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50004/1/12,50004/1/13</fieldValue>
+				</stringFilterStatement>		
+			<stringFilterStatement>
+					<fieldName>identifier</fieldName>
+					<operator>contains</operator>
+					<fieldValue>CORR</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>AlarmGrouping</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>LOCAL</fieldValue>
+				</stringFilterStatement>				
+			</allCondition>	
+		</anyCondition>
+	</topFilter>
+			<topFilter name="SyslogBFDOWN_LinkDown_Event_Remote">
+		<anyCondition>
+			<allCondition  tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50004/1/12,50004/1/13</fieldValue>
+				</stringFilterStatement>			
+				<stringFilterStatement>
+					<fieldName>identifier</fieldName>
+					<operator>doesNotContain</operator>
+					<fieldValue>CORR</fieldValue>
+				</stringFilterStatement>
+				</allCondition>		
+				<allCondition  tag="ProblemAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50004/1/12,50004/1/13</fieldValue>
+				</stringFilterStatement>		
+			<stringFilterStatement>
+					<fieldName>identifier</fieldName>
+					<operator>contains</operator>
+					<fieldValue>CORR</fieldValue>
+				</stringFilterStatement>	
+				<stringFilterStatement>
+					<fieldName>AlarmGrouping</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>REMOTE</fieldValue>
+				</stringFilterStatement>
+			</allCondition>				
+		</anyCondition>
+	</topFilter>
+	<topFilter name="SyslogBFDOWN_LinkDown_Event_Supress_Lower_SiteID">
+		<anyCondition>
+			<allCondition  tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+ 				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50004/1/12,50004/1/13</fieldValue>
+				</stringFilterStatement>
+					<stringFilterStatement>
+					<fieldName>identifier</fieldName>
+					<operator>doesNotContain</operator>
+					<fieldValue>CORR</fieldValue>
+				</stringFilterStatement>
+			</allCondition>	
+				
+		</anyCondition>
+	</topFilter>  
+	</filters>

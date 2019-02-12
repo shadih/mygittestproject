@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uca:Alarms xmlns:uca="http://hp.com/uca/expert/x733Alarm" xmlns="http://hp.com/uca/expert/x733Alarm">
+
+
+
+<uca:AlarmCreationInterface>
+<uca:identifier>DEVICE-12.80.72.33 Trigger</uca:identifier>  
+<uca:sourceIdentifier>ipag</uca:sourceIdentifier>
+<!--   Source Identifier is missing for alarm: [DEVICE-10.0.38.72 -->
+<!--       <originatingManagedEntity>DEVICE 10.10.10.10</originatingManagedEntity> -->
+       <originatingManagedEntity>DEVICE 12.80.72.33</originatingManagedEntity>
+      <originatingManagedEntityStructure>
+          <classInstance class="DEVICE " instance="12.80.72.33"/>
+      </originatingManagedEntityStructure>
+      <alarmType>COMMUNICATIONS_ALARM</alarmType>
+      <probableCause>Remote CCM timeout Hu4 to VR1 ERROR,</probableCause>
+      <perceivedSeverity>MAJOR</perceivedSeverity>
+      <networkState>NOT_CLEARED</networkState>
+      <operatorState>NOT_ACKNOWLEDGED</operatorState>
+      <problemState>NOT_HANDLED</problemState>
+     <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+      <additionalText>ADDITIONAL_TEXT</additionalText>
+      <notificationIdentifier>123</notificationIdentifier>
+      <customFields>
+        <customField name="EventKey" value="50004/1/2"/>
+       <uca:customField value="CIENA NTE" name="remote_device_type"/>
+      <customField name="deviceType" value="JUNIPER MX SERIES"/> 
+<!--        <customField name="device_name" value="JUNIPER MX SERIES"/>  -->
+      <customField name="enterprise_id" value=".123"/>
+      <customField name="alert-id" value="123"/> 
+         <customField name="domain" value="VPLS-PE"/>
+         <customField name="classification" value="VPLS-CFO"/>
+         <customField name="strap_no" value="2102"/>
+          <customField name="reason_code" value="VPLS-PE"/>
+         <customField name="reason" value="VPLS-PE"/>
+         <customField name="EventName" value=".143.0.68.226/0/0/3/SNJSCA02CA1_2821-DC_CISCO 2800 SERIES"/>
+         <customField name="fe_time_stamp" value="1378320363"/>
+         <customField name="be_time_stamp" value="1378320363"/>       
+         <customField name="component"
+			value="Level 4 MD Name DYBHFLMB2MX-13_3097_AID-4 MA Name MA_Name0"/>
+         <customField name="SeqNumber" value="1IP88576"/>
+         <customField name="isHealthCheckAlarm" value="false"/>
+         <customField name="deviceExists" value="true"/>
+      </customFields>
+</uca:AlarmCreationInterface>
+
+</uca:Alarms>
+

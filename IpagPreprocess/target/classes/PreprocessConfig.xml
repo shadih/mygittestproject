@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<purgeIntervalConfig>
-<purgeInterval>
-	<module>ipagPreprocess</module>
-	<clearPurgeInterval>3600</clearPurgeInterval>
-	<activePurgeInterval>604800</activePurgeInterval>
-</purgeInterval>
-</purgeIntervalConfig>      

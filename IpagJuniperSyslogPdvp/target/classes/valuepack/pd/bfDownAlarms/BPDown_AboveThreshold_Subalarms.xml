@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uca:Alarms xmlns:uca="http://hp.com/uca/expert/x733Alarm" xmlns="http://hp.com/uca/expert/x733Alarm">
+ 
+ <uca:AlarmCreationInterface>
+	<uca:sourceIdentifier>ipag</uca:sourceIdentifier>
+	<uca:identifier>DEVICE-12.82.104.28 SubAlarm 1</uca:identifier>
+	<uca:originatingManagedEntity>DEVICE 12.82.104.28</uca:originatingManagedEntity>
+      <originatingManagedEntityStructure>
+          <classInstance class="DEVICE" instance="135.184.213.143"/>
+      </originatingManagedEntityStructure>
+      <alarmType>COMMUNICATIONS_ALARM</alarmType>
+      <probableCause>Remote CCM timeout Juniper ERROR Subalarm,</probableCause>
+      <perceivedSeverity>MAJOR</perceivedSeverity>
+      <networkState>NOT_CLEARED</networkState>
+      <operatorState>NOT_ACKNOWLEDGED</operatorState>
+      <problemState>NOT_HANDLED</problemState>
+     <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+      <additionalText>ADDITIONAL_TEXT</additionalText>
+      <notificationIdentifier>123</notificationIdentifier>
+      <customFields>   
+      <customField name="EventKey" value="50004/1/2"/>
+       <uca:customField value="CIENA NTE" name="remote_device_type"/>
+       <customField value="976" name="savpn_siteid"/>
+      <customField name="device_type" value="JUNIPER MX SERIES"/> 
+      <customField name="enterprise_id" value=".123"/>
+      <customField name="alert-id" value="123"/> 
+         <customField name="domain" value="VPLS-PE"/>
+         <customField name="classification" value="VPLS-CFO"/>
+         <customField name="strap_no" value="2102"/>
+          <customField name="reason_code" value="VPLS-PE"/>
+         <customField name="reason" value="THIS"/>
+         <customField name="EventName" value=".143.0.68.226/976"/>
+         <customField name="fe_time_stamp" value="1378320363"/>
+         <customField name="be_time_stamp" value="1378320363"/>
+           <customField name="component" value="LocalSite=976, RemoteSite=546"/>       
+<!--          <customField name="component" value="LocalSite=546, RemoteSite=976"/> -->
+         <customField name="isHealthCheckAlarm" value="false"/>
+      </customFields>
+
+</uca:AlarmCreationInterface>
+ <!--  1 of 26 SubAlarms Above -->
+ <!--  2 of 26 SubAlarms Below-->
+<uca:AlarmCreationInterface>
+	<uca:sourceIdentifier>ipag</uca:sourceIdentifier>
+<!-- Format of key is local ipAddress/remote Savpn_ID	-->
+	<uca:identifier>DEVICE-12.82.104.28 SubAlarm 2</uca:identifier>
+	<uca:originatingManagedEntity>DEVICE 12.82.104.28</uca:originatingManagedEntity>
+      <originatingManagedEntityStructure>
+          <classInstance class="DEVICE" instance="135.184.213.143"/>
+      </originatingManagedEntityStructure>
+      <alarmType>COMMUNICATIONS_ALARM</alarmType>
+      <probableCause>Remote CCM timeout Juniper ERROR Subalarm,</probableCause>
+      <perceivedSeverity>MAJOR</perceivedSeverity>
+      <networkState>NOT_CLEARED</networkState>
+      <operatorState>NOT_ACKNOWLEDGED</operatorState>
+      <problemState>NOT_HANDLED</problemState>
+     <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+      <additionalText>ADDITIONAL_TEXT</additionalText>
+      <notificationIdentifier>123</notificationIdentifier>
+      <customFields>   
+      <customField name="EventKey" value="50004/1/2"/>
+       <uca:customField value="CIENA NTE" name="remote_device_type"/>
+       <customField value="976" name="savpn_siteid"/>
+      <customField name="device_type" value="JUNIPER MX SERIES"/> 
+      <customField name="enterprise_id" value=".123"/>
+      <customField name="alert-id" value="123"/> 
+         <customField name="domain" value="VPLS-PE"/>
+         <customField name="classification" value="VPLS-CFO"/>
+         <customField name="strap_no" value="2102"/>
+          <customField name="reason_code" value="VPLS-PE"/>
+         <customField name="reason" value="this"/>
+         <customField name="EventName" value=".143.0.68.226/976"/>
+         <customField name="fe_time_stamp" value="1378320363"/>
+         <customField name="be_time_stamp" value="1378320363"/>
+           <customField name="component" value="LocalSite=976, RemoteSite=546"/>       
+<!--          <customField name="component" value="LocalSite=546, RemoteSite=976"/> -->
+         <customField name="isHealthCheckAlarm" value="false"/>
+      </customFields>
+
+</uca:AlarmCreationInterface>
+<!--  2 of 26 SubAlarms Above -->
+ <!--  3 of 26 SubAlarms Below-->
+<uca:AlarmCreationInterface>
+	<uca:sourceIdentifier>ipag</uca:sourceIdentifier>
+<!-- Format of key is local ipAddress/remote Savpn_ID	-->
+	<uca:identifier>DEVICE-12.82.104.28 SubAlarm 3</uca:identifier>
+	<uca:originatingManagedEntity>DEVICE 12.82.104.28</uca:originatingManagedEntity>
+      <originatingManagedEntityStructure>
+          <classInstance class="DEVICE" instance="12.82.104.28"/>
+      </originatingManagedEntityStructure>
+      <alarmType>COMMUNICATIONS_ALARM</alarmType>
+      <probableCause>Remote CCM timeout Juniper ERROR Subalarm,</probableCause>
+      <perceivedSeverity>MAJOR</perceivedSeverity>
+      <networkState>NOT_CLEARED</networkState>
+      <operatorState>NOT_ACKNOWLEDGED</operatorState>
+      <problemState>NOT_HANDLED</problemState>
+     <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+      <additionalText>ADDITIONAL_TEXT</additionalText>
+      <notificationIdentifier>123</notificationIdentifier>
+      <customFields>   
+      <customField name="EventKey" value="50004/1/2"/>
+       <uca:customField value="CIENA NTE" name="remote_device_type"/>
+       <customField value="976" name="savpn_siteid"/>
+      <customField name="device_type" value="JUNIPER MX SERIES"/> 
+      <customField name="enterprise_id" value=".123"/>
+      <customField name="alert-id" value="123"/> 
+         <customField name="domain" value="VPLS-PE"/>
+         <customField name="classification" value="VPLS-CFO"/>
+         <customField name="strap_no" value="2102"/>
+          <customField name="reason_code" value="VPLS-PE"/>
+         <customField name="reason" value="this"/>
+         <customField name="EventName" value=".143.0.68.226/976"/>
+         <customField name="fe_time_stamp" value="1378320363"/>
+         <customField name="be_time_stamp" value="1378320363"/>
+           <customField name="component" value="this and that"/>       
+<!--          <customField name="component" value="LocalSite=546, RemoteSite=976"/> -->
+         <customField name="isHealthCheckAlarm" value="false"/>
+      </customFields>
+</uca:AlarmCreationInterface>
+<uca:AlarmCreationInterface>
+	<uca:sourceIdentifier>ipag</uca:sourceIdentifier>
+<!-- Format of key is local ipAddress/remote Savpn_ID	-->
+	<uca:identifier>DEVICE-12.82.104.28 SubAlarm 4</uca:identifier>
+	<uca:originatingManagedEntity>DEVICE 12.82.104.28</uca:originatingManagedEntity>
+      <originatingManagedEntityStructure>
+          <classInstance class="DEVICE" instance="12.82.104.28"/>
+      </originatingManagedEntityStructure>
+      <alarmType>COMMUNICATIONS_ALARM</alarmType>
+      <probableCause>Remote CCM timeout Juniper ERROR Subalarm,</probableCause>
+      <perceivedSeverity>MAJOR</perceivedSeverity>
+      <networkState>NOT_CLEARED</networkState>
+      <operatorState>NOT_ACKNOWLEDGED</operatorState>
+      <problemState>NOT_HANDLED</problemState>
+     <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+      <additionalText>ADDITIONAL_TEXT</additionalText>
+      <notificationIdentifier>123</notificationIdentifier>
+      <customFields>   
+      <customField name="EventKey" value="50004/1/2"/>
+       <uca:customField value="CIENA NTE" name="remote_device_type"/>
+       <customField value="976" name="savpn_siteid"/>
+      <customField name="device_type" value="JUNIPER MX SERIES"/> 
+      <customField name="enterprise_id" value=".123"/>
+      <customField name="alert-id" value="123"/> 
+         <customField name="domain" value="VPLS-PE"/>
+         <customField name="classification" value="VPLS-CFO"/>
+         <customField name="strap_no" value="2102"/>
+          <customField name="reason_code" value="VPLS-PE"/>
+         <customField name="reason" value="this"/>
+         <customField name="EventName" value=".143.0.68.226/976"/>
+         <customField name="fe_time_stamp" value="1378320363"/>
+         <customField name="be_time_stamp" value="1378320363"/>
+           <customField name="component" value="this and that"/>       
+<!--          <customField name="component" value="LocalSite=546, RemoteSite=976"/> -->
+         <customField name="isHealthCheckAlarm" value="false"/>
+      </customFields>
+</uca:AlarmCreationInterface>
+<uca:AlarmCreationInterface>
+	<uca:sourceIdentifier>ipag</uca:sourceIdentifier>
+<!-- Format of key is local ipAddress/remote Savpn_ID	-->
+	<uca:identifier>DEVICE-12.82.104.28 SubAlarm 5</uca:identifier>
+	<uca:originatingManagedEntity>DEVICE 12.82.104.28</uca:originatingManagedEntity>
+      <originatingManagedEntityStructure>
+          <classInstance class="DEVICE" instance="12.82.104.28"/>
+      </originatingManagedEntityStructure>
+      <alarmType>COMMUNICATIONS_ALARM</alarmType>
+      <probableCause>Remote CCM timeout Juniper ERROR Subalarm,</probableCause>
+      <perceivedSeverity>MAJOR</perceivedSeverity>
+      <networkState>NOT_CLEARED</networkState>
+      <operatorState>NOT_ACKNOWLEDGED</operatorState>
+      <problemState>NOT_HANDLED</problemState>
+     <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+      <additionalText>ADDITIONAL_TEXT</additionalText>
+      <notificationIdentifier>123</notificationIdentifier>
+      <customFields>   
+      <customField name="EventKey" value="50004/1/2"/>
+       <uca:customField value="CIENA NTE" name="remote_device_type"/>
+       <customField value="976" name="savpn_siteid"/>
+      <customField name="device_type" value="JUNIPER MX SERIES"/> 
+      <customField name="enterprise_id" value=".123"/>
+      <customField name="alert-id" value="123"/> 
+         <customField name="domain" value="VPLS-PE"/>
+         <customField name="classification" value="VPLS-CFO"/>
+         <customField name="strap_no" value="2102"/>
+          <customField name="reason_code" value="VPLS-PE"/>
+         <customField name="reason" value="this"/>
+         <customField name="EventName" value=".143.0.68.226/976"/>
+         <customField name="fe_time_stamp" value="1378320363"/>
+         <customField name="be_time_stamp" value="1378320363"/>
+           <customField name="component" value="this and that"/>       
+<!--          <customField name="component" value="LocalSite=546, RemoteSite=976"/> -->
+         <customField name="isHealthCheckAlarm" value="false"/>
+      </customFields>
+</uca:AlarmCreationInterface>
+</uca:Alarms>
+
+

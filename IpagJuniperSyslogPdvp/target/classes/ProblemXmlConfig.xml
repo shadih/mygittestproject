@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProblemPolicies xmlns="http://config.pd.vp.expert.uca.hp.com/">
+	<mainPolicy>
+		<candidateVisibility>
+			<candidateVisibilityTimeMode>Min</candidateVisibilityTimeMode>
+			<candidateVisibilityTimeValue>5000</candidateVisibilityTimeValue>
+			<markCandidate>true</markCandidate>
+		</candidateVisibility>
+		<transientFiltering>
+			<transientFilteringEnabled>false</transientFilteringEnabled>
+			<transientFilteringDelay>5000</transientFilteringDelay>
+		</transientFiltering>
+		<counterTotalNumberAlarms>Current</counterTotalNumberAlarms>
+		<actions>
+            <defaultActionScriptReference>Exec_localhost</defaultActionScriptReference>
+			<action name="adtran">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.JuniperSyslogActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+			<action name="ciena">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.JuniperSyslogActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+			<action name="juniper">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.JuniperSyslogActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+			<action name="ipag">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.JuniperSyslogActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+			<action name="pmoss">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.JuniperSyslogActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+			<action name="InfoVista">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.JuniperSyslogActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+		</actions>
+	</mainPolicy>
+	<problemPolicy name="ProblemDefault">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>2000</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>10000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>		
+		<timeWindow>
+			<timeWindowMode>None</timeWindowMode>
+			<timeWindowBeforeTrigger>30000</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<booleans>
+			<boolean key="Bool1"><value>true</value></boolean>
+			<boolean key="Bool2"><value>false</value></boolean>
+		</booleans>
+		<strings>
+			<string key="s1"><value><![CDATA[String]]></value></string>
+			<string key="computeProblemEntity"><value><![CDATA[alarm.getOriginatingManagedEntity()]]></value></string>
+			<string key="isMatchingTriggerAlarmCriteria"><value><![CDATA[true]]></value></string>
+			<string key="isMatchingProblemAlarmCriteria"><value><![CDATA[true]]></value></string>
+			<string key="isMatchingSubAlarmCriteria"><value><![CDATA[true]]></value></string>
+			<string key="calculateProblemAlarmAdditionalText"><value><![CDATA[site down (Default)]]></value></string>
+		</strings>
+		<longs>
+			<long key="l1"><value>2147483647</value></long>
+		</longs>
+	</problemPolicy>	
+	<problemPolicy name="Syslog_Polling_Event">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<!--sameGroupForAllProblemEntities>false</sameGroupForAllProblemEntities-->
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<!-- 7 days -->
+        		<timeWindowBeforeTrigger>604800000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>	
+	<problemPolicy name="RpdMplsLspProblem">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>false</sameGroupForAllProblemEntities>
+		<timeWindow>
+			<timeWindowMode>None</timeWindowMode>
+			<timeWindowBeforeTrigger>0</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>	
+<!--	<problemPolicy name="JnxLacp">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>60000</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>60000</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>-->
+	<problemPolicy name="SyslogLinkdown_Event">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>false</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>
+	
+	<problemPolicy name="RpdRsvpBypassDown">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+         		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>
+	<problemPolicy name="SyslogBFDOWN_LinkDown_Event_Local">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+         		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>180000</timeWindowAfterTrigger> 
+		</timeWindow>
+		<longs>
+			<long key="SAVPNSITE-AGGREGATION-COUNT-THRESHOLD"><value>25</value></long>
+		</longs>
+		<strings></strings>
+	</problemPolicy>
+	<problemPolicy name="SyslogBFDOWN_LinkDown_Event_Remote">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+         		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>180000</timeWindowAfterTrigger> 
+		</timeWindow>
+		<longs>
+			<long key="SAVPNSITE-AGGREGATION-COUNT-THRESHOLD"><value>25</value></long>
+		</longs>
+		<strings></strings>
+	</problemPolicy>
+	
+<problemPolicy name="SyslogBFDOWN_LinkDown_Event_Supress_Lower_SiteID">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+         		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>180000</timeWindowAfterTrigger> 
+		</timeWindow>
+		<longs>
+			<long key="SAVPNSITE-AGGREGATION-COUNT-THRESHOLD"><value>25</value></long>
+		</longs>
+		<strings></strings>
+	</problemPolicy>
+	 	<problemPolicy name="FBSPtpProcess">	<!-- tj -->
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>false</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+       	 		<timeWindowBeforeTrigger>0</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>180000</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>
+
+ 	<problemPolicy name="ColdStart_Suppression">	<!-- tj -->
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>false</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>
+
+ 	<problemPolicy name="FRU_Slot_Card_Suppression">	<!-- tj -->
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>false</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>
+
+ 	<problemPolicy name="Ciena_OAM_FRU_Suppression">	<!-- tj -->
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>false</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>
+
+ 	<problemPolicy name="Ciena_LD_FRU_SLOT">	<!-- tj -->
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>false</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>
+
+ 	<problemPolicy name="Ciena_LD_FRU_CARD">	<!-- tj -->
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>false</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>
+
+		<problemPolicy name="Ciena_LD_Suppression">  <!-- tj -->
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       <timeWindow>
+        	<timeWindowMode>Trigger</timeWindowMode>
+        	<timeWindowBeforeTrigger>864000000</timeWindowBeforeTrigger> 
+        	<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>
+
+<!--		<problemPolicy name="Ciena_Syslog_OAM_PriSec"> 
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       <timeWindow>
+        	<timeWindowMode>Trigger</timeWindowMode>
+        	<timeWindowBeforeTrigger>60000</timeWindowBeforeTrigger> 
+        	<timeWindowAfterTrigger>60000</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+	</problemPolicy>
+-->
+</ProblemPolicies>

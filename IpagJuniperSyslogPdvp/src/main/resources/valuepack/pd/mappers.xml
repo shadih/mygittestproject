@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mappers xmlns="http://hp.com/uca/expert/instancemapper">
+   <mapper name="NetworkInstance">
+        <extract>
+            <fieldName>originatingManagedEntity</fieldName>
+            <matcher>DEVICE (.*) CARD .* PPORT .* LPORT (.*)$</matcher>  <!-- maps the last word of the originatingmanagedEntity -->
+<!--             <mappedTo>topo-example-$1$2</mappedTo> -->
+        </extract>
+    </mapper>
+</mappers>
+        
+
