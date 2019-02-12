@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<filters xmlns="http://hp.com/uca/expert/filter">
+   <topFilter name="JuniperCompletion">
+		<allCondition>
+				<!--  <stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement> -->  
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/24,50003/100/12,50001/100/7,50003/100/13,50003/100/16,50003/100/6,50003/100/7,50003/100/1,50004/2/3,50004/2/58916875,50004/2/58916876,50004/2/58916877
+					</fieldValue>
+				</stringFilterStatement>
+		</allCondition>  
+    </topFilter>
+</filters>

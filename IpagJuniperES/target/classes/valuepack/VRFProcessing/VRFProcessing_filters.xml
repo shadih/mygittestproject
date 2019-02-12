@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<filters xmlns="http://hp.com/uca/expert/filter">
+   <topFilter name="VRFProcessing">
+		<allCondition>
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50003/100/1</fieldValue>
+				</stringFilterStatement>
+		</allCondition>
+    </topFilter>
+</filters>

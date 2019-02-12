@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valuePackConfiguration xmlns="http://hp.com/uca/expert/config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	name="IpagJuniperES" version="0.4">
+	
+	<scenarios>
+		<scenario name="IpagJuniperES.NTDTicketCorrelation">
+			<alarmEligibilityPolicy><![CDATA[NetworkState=="NOT_CLEARED"]]></alarmEligibilityPolicy>
+ 			<eligibleForBroadcast>true</eligibleForBroadcast> 
+	        <filterFile>deploy/IpagJuniperES-0.4/NTDTicketCorrelation/NTDCorrelation_filters.xml</filterFile>
+	        <mapperFile>deploy/IpagJuniperES-0.4/NTDTicketCorrelation/mappers.xml</mapperFile>
+	        <fireAllRulesPolicy>EACH_ACCESS</fireAllRulesPolicy>        
+	        <globals></globals>
+	        <processingMode>CLOUD</processingMode>   
+	        <rulesFiles>  
+	        	<rulesFile>
+					<filename>file:./deploy/IpagJuniperES-0.4/NTDTicketCorrelation/NTDticketCorrelation_rules.drl</filename>
+					<name>NTDTicket rules</name>
+					<ruleFileType>DRL</ruleFileType>
+				</rulesFile>
+			</rulesFiles>
+	        <customLifeCycleClass>juniperES.NTDTicketCorrelation.JuniperNTDExtendedLifeCycle</customLifeCycleClass>
+		</scenario>
+<!--		
+		<scenario name="IpagJuniperES.VRFProcessing">
+			<alarmEligibilityPolicy><![CDATA[NetworkState=="NOT_CLEARED"]]></alarmEligibilityPolicy>
+ 			<eligibleForBroadcast>false</eligibleForBroadcast> 
+	        <filterFile>deploy/IpagJuniperES-0.4/VRFProcessing/VRFProcessing_filters.xml</filterFile>
+	        <mapperFile>deploy/IpagJuniperES-0.4/VRFProcessing/mappers.xml</mapperFile>
+	        <fireAllRulesPolicy>EACH_ACCESS</fireAllRulesPolicy>      
+	        <globals></globals>
+	        	<processingMode>CLOUD</processingMode>
+	        	<rulesFiles>
+	        		<rulesFile>
+						<filename>file:./deploy/IpagJuniperES-0.4/VRFProcessing/VRFProcessing_rules.drl</filename>
+						<name>VRFProcessing rules</name>
+						<ruleFileType>DRL</ruleFileType>
+					</rulesFile>
+				</rulesFiles>
+ 	        	<customLifeCycleClass>juniperES.VRFProcessing.JuniperVRFExtendedLifeCycle</customLifeCycleClass>
+		</scenario>
+-->		
+		<scenario name="IpagJuniperES.JuniperCompletion">
+					<alarmEligibilityPolicy><![CDATA[NetworkState=="NOT_CLEARED"]]></alarmEligibilityPolicy>
+		 			<eligibleForBroadcast>false</eligibleForBroadcast> 
+	        		<filterFile>deploy/IpagJuniperES-0.4/JuniperCompletion/JuniperCompletion_filters.xml</filterFile>
+	        		<mapperFile>deploy/IpagJuniperES-0.4/JuniperCompletion/mappers.xml</mapperFile>
+	        		<fireAllRulesPolicy>EACH_ACCESS</fireAllRulesPolicy>      
+	        		<globals></globals>
+	        		<processingMode>CLOUD</processingMode>
+	        		<rulesFiles>
+	        			<rulesFile>
+							<filename>file:./deploy/IpagJuniperES-0.4/JuniperCompletion/JuniperCompletion_rules.drl</filename>
+							<name>Juniper Completion rules</name>
+							<ruleFileType>DRL</ruleFileType>
+						</rulesFile>
+					</rulesFiles>
+  	        	<customLifeCycleClass>juniperES.JuniperCompletion.JuniperCompletionExtendedLifeCycle</customLifeCycleClass>
+		</scenario>
+		
+	</scenarios>
+	<mediationFlows>
+	</mediationFlows>
+</valuePackConfiguration>

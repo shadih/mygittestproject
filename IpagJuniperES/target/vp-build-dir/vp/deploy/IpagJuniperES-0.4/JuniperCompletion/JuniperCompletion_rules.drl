@@ -1,0 +1,124 @@
+package juniperES.JuniperCompletion;
+
+
+#list any import classes here.
+
+import com.hp.uca.expert.x733alarm.PerceivedSeverity;
+import com.hp.uca.expert.scenario.Scenario;
+import com.hp.uca.expert.scenario.ScenarioStatus;
+import com.hp.uca.common.trace.LogHelper;
+import com.hp.uca.expert.flag.*;
+import com.att.gfp.data.ipagAlarm.EnrichedAlarm;
+import com.att.gfp.data.ipagAlarm.AlarmState;
+import com.att.gfp.helper.service_util;
+import com.att.gfp.helper.GFPFields;
+import juniperES.JuniperCompletion.ProcessCompletionAlarm;
+import com.att.gfp.data.juniperES.helper.SendAlarm;
+import com.att.gfp.data.ipagJuniperAlarm.JuniperESEnrichedAlarm;
+
+#declare any global variables here
+global Scenario theScenario;
+
+rule "Process FRU"
+no-loop
+      when      
+        alarm : JuniperESEnrichedAlarm( justInserted == true &&
+        				isFRU() &&
+						getAlarmState() != AlarmState.duplicated) 
+                     
+       then
+       	LogHelper.enter(theScenario.getLogger(), drools.getRule().getName());
+
+        String myClass = alarm.getOriginatingManagedEntity().split(" ")[0];		
+   
+  		alarm.setJustInserted(false);
+  		theScenario.getSession().update(alarm);
+  		         
+ 		if(myClass.equals("DEVICE"))
+ 			ProcessCompletionAlarm.getInstance().ProcessCompletionDeviceFRU(alarm);
+ 			else
+ 			if(myClass.equals("SLOT") || myClass.equals("CARD"))
+ 				ProcessCompletionAlarm.getInstance().ProcessCompletionCardSlot(alarm, "FRU");
+ 			else
+ 				if(myClass.equals("PPORT"))
+ 					ProcessCompletionAlarm.getInstance().ProcessCompletionPPort(alarm, "FRU");
+ 				else
+    				if(myClass.equals("LPORT"))
+    					ProcessCompletionAlarm.getInstance().ProcessCompletionLPort(alarm, "FRU");
+
+  		// forward alarm
+ 		SendAlarm.send((EnrichedAlarm) alarm, SendAlarm.COMPLETION);
+ 
+    	theScenario.getSession().retract(alarm);
+ 				 		               
+       	LogHelper.exit(theScenario.getLogger(), drools.getRule().getName() + " Alarm=" + alarm.getIdentifier());
+end
+
+rule "Process VPN"
+no-loop
+      when       
+        alarm : JuniperESEnrichedAlarm( justInserted == true && 
+                       	isVPN() &&			
+                       	getAlarmState() != AlarmState.duplicated)                      
+       then
+       	LogHelper.enter(theScenario.getLogger(), drools.getRule().getName());
+        
+        alarm.setJustInserted(false);
+        theScenario.getSession().update(alarm);
+               
+       String myClass = alarm.getOriginatingManagedEntity().split(" ")[0];		
+        
+ 		if(myClass.equals("DEVICE") || myClass.equals("EVCNODE") )
+ 			ProcessCompletionAlarm.getInstance().ProcessCompletionDeviceVPN(alarm);
+ 			else
+ 			if(myClass.equals("SLOT") || myClass.equals("CARD"))
+ 				ProcessCompletionAlarm.getInstance().ProcessCompletionCardSlot(alarm, "VPN");
+ 			else
+ 				if(myClass.equals("PPORT"))
+ 					ProcessCompletionAlarm.getInstance().ProcessCompletionPPort(alarm, "VPN");
+ 				else
+    				if(myClass.equals("LPORT"))
+    					ProcessCompletionAlarm.getInstance().ProcessCompletionLPort(alarm, "VPN");
+ 
+  		// forward alarm
+ 		SendAlarm.send((EnrichedAlarm) alarm, SendAlarm.COMPLETION);
+ 
+    	theScenario.getSession().retract(alarm);
+    	               
+       	LogHelper.exit(theScenario.getLogger(), drools.getRule().getName() + " Alarm=" + alarm.getIdentifier());
+end
+
+rule "Process LAG"
+no-loop
+      when       
+        alarm : JuniperESEnrichedAlarm( justInserted == true && 
+                       	isLAG() &&
+						getAlarmState() != AlarmState.duplicated)                      
+       then
+       	LogHelper.enter(theScenario.getLogger(), drools.getRule().getName());
+        
+        alarm.setJustInserted(false);
+        theScenario.getSession().update(alarm);
+        
+        String myClass = alarm.getOriginatingManagedEntity().split(" ")[0];		
+        
+ 		if(myClass.equals("DEVICE"))
+ 			ProcessCompletionAlarm.getInstance().ProcessCompletionDeviceLAG(alarm);
+ 			else
+ 			if(myClass.equals("SLOT") || myClass.equals("CARD"))
+ 				ProcessCompletionAlarm.getInstance().ProcessCompletionCardSlot(alarm, "LAG");
+ 			else
+ 				if(myClass.equals("PPORT"))
+ 					ProcessCompletionAlarm.getInstance().ProcessCompletionPPort(alarm, "LAG");
+ 				else
+    				if(myClass.equals("LPORT"))
+    					ProcessCompletionAlarm.getInstance().ProcessCompletionLPort(alarm, "LAG");
+ 
+ 		// forward alarm
+ 		SendAlarm.send((EnrichedAlarm) alarm, SendAlarm.COMPLETION);
+  
+     	theScenario.getSession().retract(alarm);
+   	  				          
+       	LogHelper.exit(theScenario.getLogger(), drools.getRule().getName() + " Alarm=" + alarm.getIdentifier());
+end
+

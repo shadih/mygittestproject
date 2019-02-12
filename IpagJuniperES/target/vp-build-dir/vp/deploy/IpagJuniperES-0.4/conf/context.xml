@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:amq="http://activemq.apache.org/schema/core" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/jms 
+                           http://www.springframework.org/schema/jms/spring-jms.xsd
+                           http://activemq.apache.org/schema/core 
+                           http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+
+	<context:annotation-config />
+
+<!--   	<bean name="forwardedAlarmsFile" class="java.io.File">
+		<constructor-arg index="0">
+			<value>./logs/Forwarded-alarms-ToNOM.xml</value>
+		</constructor-arg>
+	</bean> 
+
+   	<bean id="alarmForwarder" class="com.hp.uca.expert.alarm.FileAlarmForwarder" depends-on="forwardedAlarmsFile"> 
+ 		<constructor-arg index="0"><ref bean="forwardedAlarmsFile"/></constructor-arg>
+ 		<constructor-arg index="1"><value>true</value></constructor-arg>
+ 	</bean>    
+	
+ 	<bean id="nomAlarmForwarder" class="com.hp.uca.expert.alarm.OpenMediationAlarmForwarder"> 
+ 		<constructor-arg index="0"> 
+                         <value>openMediationAlarmForwarder</value> 
+ 		</constructor-arg> 
+ 		<constructor-arg index="1"> 
+ 			<value>ForwardedAlarmToAlarmManager2</value> 
+ 		</constructor-arg>   
+ 	</bean> 
+ 	<bean id="mobilityCDCAlarmForwarder" class="com.hp.uca.expert.alarm.OpenMediationAlarmForwarder"> 
+ 		<constructor-arg index="0"> 
+                         <value>MobilityCDCAlarmForwarder</value> 
+ 		</constructor-arg>   
+ 		<constructor-arg index="1">   
+ 			<value>ForwardedAlarmToMobilityCDC</value> 
+ 		</constructor-arg>   
+ 	</bean> 
+	<bean id="alarmForwarders" class="com.hp.uca.expert.alarm.internal.AlarmForwarders">
+	</bean>   --> 	   
+	 
+	<bean id="CypherEngine" class="com.att.gfp.helper.CypherEngine"></bean>
+
+</beans>

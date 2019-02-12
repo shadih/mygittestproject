@@ -1,0 +1,8 @@
+<object-stream>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>2</type>
+  <factId>1</factId>
+  <objectToString>id=tick val=false desc=Recurrent tick</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+</object-stream>
+</object-stream>
