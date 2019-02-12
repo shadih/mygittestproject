@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DecompseConfig>
+<decomposeRules>
+	<decomposeRule>
+		 <type>adtranPportDecomp</type>
+		 <order>whenTheEventArrived</order> 
+		 <eventNames>
+		 	<eventName>50001/100/7</eventName>
+		 	<eventName>50001/100/1</eventName>
+		 </eventNames>  
+	</decomposeRule> 
+	<decomposeRule>    
+		 <type>adtranCardDecomp</type>  
+		 <order>whileSendingTheEvent</order>   
+		 <eventNames>
+		 	<eventName>50001/100/20</eventName>
+		 </eventNames>   
+	</decomposeRule>
+	<decomposeRule>  
+		 <type>adtranDeviceDecomp</type>
+		 <order>whenTheEventArrived</order> 
+		 <eventNames>  
+		 	<eventName>50001/100/39</eventName>  
+		 </eventNames> 
+	</decomposeRule>
+</decomposeRules>  
+</DecompseConfig>	     
+        
