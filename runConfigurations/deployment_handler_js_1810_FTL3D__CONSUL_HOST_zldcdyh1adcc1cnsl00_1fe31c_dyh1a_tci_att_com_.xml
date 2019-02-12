@@ -1,9 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="deployment-handler.js 1810 FTL3D (CONSUL_HOST=zldcdyh1adcc1cnsl00.1fe31c.dyh1a.tci.att.com)" type="NodeJSConfigurationType" path-to-js-file="deployment-handler.js" working-dir="$PROJECT_DIR$">
-    <envs>
-      <env name="CONSUL_HOST" value="zldcdyh1adcc1cnsl00.1fe31c.dyh1a.tci.att.com" />
-      <env name="NODE_EXTRA_CA_CERTS" value="C:\Users\sh1986\Documents\ECOMP\cert\aafcacert.crt" />
-    </envs>
-    <method v="2" />
-  </configuration>
-</component>
