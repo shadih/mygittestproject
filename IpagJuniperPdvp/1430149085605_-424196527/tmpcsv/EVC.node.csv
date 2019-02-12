@@ -1,5 +1,0 @@
-@ref(networkElement)|@const(IpagEvc)class
-@index(EVC)key|TDL_instance_name|key|alarm_classification|alarm_domain|data_source|is_operational|legacy_org_ind|adt_link_down|adt_link_down_time|adt_shdsl_down|adt_shdsl_down_time|ciena_dying_gasp|ciena_dying_gasp_time|ciena_link_down|ciena_link_down_tim
-VPWS:166398|VPWS:166398|VPWS:166398|||OEW-VPLS||||||||||
-VPLS:1471189|VPLS:1471189|VPLS:1471189|||OEW-VPLS||||||||||
-puke:12345|puke:12345|puke:12345|||OEW-VPLS||||||||||

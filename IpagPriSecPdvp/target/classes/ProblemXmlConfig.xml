@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProblemPolicies xmlns="http://config.pd.vp.expert.uca.hp.com/">
+	<mainPolicy>
+		<candidateVisibility>
+			<candidateVisibilityTimeMode>Max</candidateVisibilityTimeMode>
+			<candidateVisibilityTimeValue>5000</candidateVisibilityTimeValue>
+			<markCandidate>true</markCandidate>
+		</candidateVisibility>
+		<transientFiltering>
+			<transientFilteringEnabled>false</transientFilteringEnabled>
+			<transientFilteringDelay>5000</transientFilteringDelay>
+		</transientFiltering>
+		<counterTotalNumberAlarms>Current</counterTotalNumberAlarms>
+		<actions>
+            <defaultActionScriptReference>Exec_localhost</defaultActionScriptReference>
+			<action name="adtran">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.PriSecActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+			<action name="ciena">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.PriSecActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+			<action name="juniper">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.PriSecActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+			<action name="ipag">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.PriSecActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+			<action name="pmoss">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.PriSecActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+			<action name="InfoVista">
+				<actionReference>dummyActionRef</actionReference>
+				<actionClass>com.att.gfp.actions.PriSecActionsFactory</actionClass>
+				<attributeUsedForKeyDuringRecognition>RawDetail</attributeUsedForKeyDuringRecognition>
+				<attributeUsedForKeyPbAlarmCreation>RawDetail</attributeUsedForKeyPbAlarmCreation>
+			</action>
+		</actions>
+	</mainPolicy>
+	<problemPolicy name="ProblemDefault">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>10000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>		
+		<timeWindow>
+			<timeWindowMode>Trigger</timeWindowMode>
+			<!-- This has to be set to the max value of all other problem policies -->
+			<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>0</timeWindowAfterTrigger>
+		</timeWindow>
+		<booleans>
+			<boolean key="Bool1"><value>true</value></boolean>
+			<boolean key="Bool2"><value>false</value></boolean>
+		</booleans>
+		<strings>
+			<string key="s1"><value><![CDATA[String]]></value></string>
+			<string key="computeProblemEntity"><value><![CDATA[alarm.getOriginatingManagedEntity()]]></value></string>
+			<string key="isMatchingTriggerAlarmCriteria"><value><![CDATA[true]]></value></string>
+			<string key="isMatchingProblemAlarmCriteria"><value><![CDATA[true]]></value></string>
+			<string key="isMatchingSubAlarmCriteria"><value><![CDATA[true]]></value></string>
+			<string key="calculateProblemAlarmAdditionalText"><value><![CDATA[site down (Default)]]></value></string>
+		</strings>
+		<longs>
+			<long key="l1"><value>2147483647</value></long>
+		</longs>
+	</problemPolicy>
+	
+	<problemPolicy name="JnxLacp_1">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>60000</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings>
+		<!-- Of all the alarms for this problem policy, this event is considered to have the maximum delay before reaching here.
+		This means that if we receive this alarm, we can stop waiting for more alarms to arrive and send out the exiting correlated alarms. 
+		This is only valid when a correlation has occurred and we are waiting for more alarms to be received to add.  -->
+<!--  			<string key="MaxDelayedEvent"><value>50003/100/1</value></string> -->
+		</strings>
+		<longs>
+		<!-- These two longs are the maximum time that the trigger (T) and subalarm (S) could have been delayed before arriving here at this scenario 
+		These two are used to determine how long to hold an alarm before releasing it to AM if no correlation happens-->
+			<long key="MaxTAge"><value>2000</value></long>
+			<long key="MaxSAge"><value>120000</value></long>
+		</longs>
+	</problemPolicy>
+	
+		<problemPolicy name="JnxLacp_2">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>60000</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings>
+		<!-- Of all the alarms for this problem policy, this event is considered to have the maximum delay before reaching here.
+		This means that if we receive this alarm, we can stop waiting for more alarms to arrive and send out the exiting correlated alarms. 
+		This is only valid when a correlation has occurred and we are waiting for more alarms to be received to add.  -->
+<!--  			<string key="MaxDelayedEvent"><value>"50003/100/1</value></string> -->
+		</strings>
+		<longs>
+		<!-- These two longs are the maximum time that the trigger (T) and subalarm (S) could have been delayed before arriving here at this scenario 
+		These two are used to determine how long to hold an alarm before releasing it to AM if no correlation happens-->
+			<long key="MaxTAge"><value>2000</value></long>
+			<long key="MaxSAge"><value>120000</value></long>
+		</longs>
+	</problemPolicy>
+	
+		<problemPolicy name="JnxLacp_3">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>60000</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings>
+		<!-- Of all the alarms for this problem policy, this event is considered to have the maximum delay before reaching here.
+		This means that if we receive this alarm, we can stop waiting for more alarms to arrive and send out the exiting correlated alarms. 
+		This is only valid when a correlation has occurred and we are waiting for more alarms to be received to add.  -->
+<!-- 		 			<string key="MaxDelayedEvent"><value>"50003/100/1</value></string> -->
+		</strings>
+		<longs>
+		<!-- These two longs are the maximum time that the trigger (T) and subalarm (S) could have been delayed before arriving here at this scenario 
+		These two are used to determine how long to hold an alarm before releasing it to AM if no correlation happens-->
+			<long key="MaxTAge"><value>2000</value></long>
+			<long key="MaxSAge"><value>120000</value></long>
+		</longs>
+	</problemPolicy>
+	
+	<problemPolicy name="JnxLacp_4">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       		<timeWindow>
+        		<timeWindowMode>Trigger</timeWindowMode>
+        		<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+ 			<timeWindowAfterTrigger>60000</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings>
+		<!-- Of all the alarms for this problem policy, this event is considered to have the maximum delay before reaching here.
+		This means that if we receive this alarm, we can stop waiting for more alarms to arrive and send out the exiting correlated alarms. 
+		This is only valid when a correlation has occurred and we are waiting for more alarms to be received to add.  -->
+<!--  			<string key="MaxDelayedEvent"><value>"50003/100/1</value></string> -->
+		</strings>
+		<longs>
+		<!-- These two longs are the maximum time that the trigger (T) and subalarm (S) could have been delayed before arriving here at this scenario 
+		These two are used to determine how long to hold an alarm before releasing it to AM if no correlation happens-->
+			<long key="MaxTAge"><value>2000</value></long>
+			<long key="MaxSAge"><value>120000</value></long>
+		</longs>
+	</problemPolicy>
+		
+	<problemPolicy name="JuniperLD_OAM_LAG">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       <timeWindow>
+        	<timeWindowMode>Trigger</timeWindowMode>
+        	<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+  			<timeWindowAfterTrigger>1</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings>
+		<!-- Of all the alarms for this problem policy, this event is considered to have the maximum delay before reaching here.
+		This means that if we receive this alarm, we can stop waiting for more alarms to arrive and send out the correlated alarms. 
+		This is only valid when a correlation has occurred and we are waiting for more alarms to be received to add.  -->
+<!-- 			<string key="MaxDelayedEvent"><value>"50003/100/1</value></string> -->
+		</strings>
+		<longs>
+		<!-- These two longs are the maximum time that the trigger (T) and subalarm (S) could have been delayed before arriving here at this scenario 
+		These two are used to determine how long to hold an alarm before releasing it to AM if no correlation happens-->
+			<long key="MaxTAge"><value>2000</value></long>
+			<long key="MaxSAge"><value>60000</value></long>
+		</longs>
+	</problemPolicy>
+	
+	<problemPolicy name="OspfProblem">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+		<timeWindow>
+			<timeWindowMode>Trigger</timeWindowMode>
+			<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>120000</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings>
+		</strings>
+		<longs>
+		<!-- These two longs are the maximum time that the trigger (T) and subalarm (S) could have been delayed before arriving here at this scenario 
+		These two are used to determine how long to hold an alarm before releasing it to AM if no correlation happens-->
+			<long key="MaxTAge"><value>2000</value></long>
+			<long key="MaxSAge"><value>30000</value></long>
+		</longs>
+	</problemPolicy>
+	
+	<problemPolicy name="Ciena_Syslog_OAM_PriSec"> 
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+       <timeWindow>
+        	<timeWindowMode>Trigger</timeWindowMode>
+        	<timeWindowBeforeTrigger>60000</timeWindowBeforeTrigger> 
+        	<timeWindowAfterTrigger>60000</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings></strings>
+		<longs>
+		<!-- These two longs are the maximum time that the trigger (T) and subalarm (S) could have been delayed before arriving here at this scenario -->
+		<!-- Here neither the trigger nor the subalarm are delayed in the syslog VP so we set it at 2 seconds -->
+			<long key="MaxTAge"><value>2000</value></long>
+			<long key="MaxSAge"><value>2000</value></long>
+		</longs>
+	</problemPolicy>
+
+	<problemPolicy name="AAF_DA_AlarmProcessing">
+		<problemAlarm>
+			<delayForProblemAlarmCreation>0</delayForProblemAlarmCreation>
+			<delayForProblemAlarmClearance>0</delayForProblemAlarmClearance>
+		</problemAlarm>
+		<troubleTicket>
+			<automaticTroubleTicketCreation>false</automaticTroubleTicketCreation>
+			<propagateTroubleTicketToSubAlarms>false</propagateTroubleTicketToSubAlarms>
+			<propagateTroubleTicketToProblemAlarm>false</propagateTroubleTicketToProblemAlarm>
+			<delayForTroubleTicketCreation>1000</delayForTroubleTicketCreation>
+		</troubleTicket>
+		<groupTickFlagAware>false</groupTickFlagAware>
+		<sameGroupForAllProblemEntities>true</sameGroupForAllProblemEntities>
+		<timeWindow>
+			<timeWindowMode>Trigger</timeWindowMode>
+			<timeWindowBeforeTrigger>180000</timeWindowBeforeTrigger>
+			<timeWindowAfterTrigger>180000</timeWindowAfterTrigger>
+		</timeWindow>
+		<strings>
+		<!-- Of all the alarms for this problem policy, this event is considered to have the maximum delay before reaching here.
+		This means that if we receive this alarm, we can stop waiting for more alarms to arrive and send out the exiting correlated alarms. 
+		This is only valid when a correlation has occurred and we are waiting for more alarms to be received to add.  -->
+			<string key="MaxDelayedEvent"><value>"50003/100/1</value></string>
+		</strings>
+		<longs>
+		<!-- These two longs are the maximum time that the trigger (T) and subalarm (S) could have been delayed before arriving here at this scenario 
+		These two are used to determine how long to hold an alarm before releasing it to AM if no correlation happens-->
+			<long key="MaxTAge"><value>2000</value></long>
+			<long key="MaxSAge"><value>10000</value></long>
+		</longs>
+	</problemPolicy> 
+</ProblemPolicies>
+

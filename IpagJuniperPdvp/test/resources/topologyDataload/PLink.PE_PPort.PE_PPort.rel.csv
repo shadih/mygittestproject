@@ -1,3 +1,0 @@
-@rel(PLink)
-@from(PE_PPort)key|@to(PE_PPort)key
-12.82.125.192/1/0/0|12.82.0.2/7/2/0

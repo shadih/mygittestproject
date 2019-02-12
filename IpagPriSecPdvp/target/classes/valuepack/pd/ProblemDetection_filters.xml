@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<filters xmlns="http://hp.com/uca/expert/filter">
+
+
+	<topFilter name="JuniperLD_OAM_LAG">
+		<anyCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50003/100/1</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>DEVICE</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50003/100/1</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="JnxLacp_1">
+		<anyCondition tag="CORR_PRIORITY=1">
+			<allCondition tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50003/100/24</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/1,50004/1/10,50004/1/19,50004/1/21,50004/1/39,50004/1/18,50004/1/20</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="JnxLacp_2">
+		<anyCondition tag="CORR_PRIORITY=2">
+			<allCondition tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50004/1/18,50004/1/20</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/1,50004/1/10,50004/1/19,50004/1/21,50004/1/39</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="JnxLacp_3">
+		<anyCondition tag="CORR_PRIORITY=3">
+			<allCondition tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50004/1/19,50004/1/21,50004/1/39</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/1,50004/1/10</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="JnxLacp_4">
+		<anyCondition tag="CORR_PRIORITY=4">
+			<allCondition tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50004/1/10</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50003/100/1</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+
+	<topFilter name="OspfProblem">
+		<anyCondition>
+			<anyCondition tag="Trigger,SubAlarm">
+				<allCondition>
+					<stringFilterStatement>
+						<fieldName>EventKey</fieldName>
+						<operator>isListedIn</operator>
+						<fieldValue>50003/100/3,50003/100/4,50003/100/21,50003/100/1</fieldValue>
+					</stringFilterStatement>
+					<stringFilterStatement>
+						<fieldName>originatingManagedEntity</fieldName>
+						<operator>contains</operator>
+						<fieldValue>DEVICE</fieldValue>
+					</stringFilterStatement>
+				</allCondition>
+			</anyCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50003/100/1</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PORT</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+	<topFilter name="AAF_DA_AlarmProcessing">
+		<anyCondition>
+			<allCondition tag="Trigger,SubAlarm">
+				<stringFilterStatement>
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>
+				</stringFilterStatement>
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>
+					<fieldValue>50003/100/1,50002/100/19,50002/100/21,50004/1/10</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+	<topFilter name="Ciena_Syslog_OAM_PriSec">
+		<anyCondition>
+			<allCondition tag="Trigger">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50004/1/10</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+			<allCondition tag="SubAlarm">
+				<stringFilterStatement>
+					<fieldName>EventKey</fieldName>
+					<operator>isEqual</operator>
+					<fieldValue>50002/100/19</fieldValue>
+				</stringFilterStatement>
+			</allCondition>
+		</anyCondition>
+	</topFilter>
+
+</filters>
+

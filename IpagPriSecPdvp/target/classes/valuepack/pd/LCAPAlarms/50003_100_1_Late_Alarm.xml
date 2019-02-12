@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uca:Alarms xmlns:uca="http://hp.com/uca/expert/x733Alarm" xmlns="http://hp.com/uca/expert/x733Alarm">	
+    <!--  This is the subAlarm -->
+	<uca:AlarmCreationInterface xmlns="http://hp.com/uca/expert/x733Alarm">
+    	<uca:identifier>PPORT-150.0.0.212/5/0/0-50003/100/1_7500</uca:identifier>
+    	<uca:sourceIdentifier>ipag</uca:sourceIdentifier>
+    	<!--  uca:alarmRaisedTime>2013-04-11T13:58:17.000-05:00</uca:alarmRaisedTime-->
+    	<uca:originatingManagedEntity>PPORT 150.0.0.212/5/0/0</uca:originatingManagedEntity>
+    	<uca:originatingManagedEntityStructure>
+        	<uca:classInstance instance="150.0.0.212/5/0/0" clazz="lPORT"/>
+    	</uca:originatingManagedEntityStructure>
+    	<uca:alarmType>COMMUNICATIONS_ALARM</uca:alarmType>
+    	<uca:probableCause>Down VRF=&lt;VPWS:1000364&gt;</uca:probableCause>
+    	<uca:perceivedSeverity>CRITICAL</uca:perceivedSeverity>
+    	<uca:networkState>NOT_CLEARED</uca:networkState>
+    	<uca:operatorState>NOT_ACKNOWLEDGED</uca:operatorState>
+	    <uca:problemState>NOT_HANDLED</uca:problemState>
+	    <uca:specificProblem>SPECIFIC_PROBLEM</uca:specificProblem>
+	    <uca:additionalText>ADDITIONAL_TEXT</uca:additionalText>
+	    <uca:notificationIdentifier>.1.3.6.1.4.1.664.5.63/6/1006301</uca:notificationIdentifier>
+	    <uca:customFields>
+	        <uca:customField value=".1.3.6.1.4.1.664.5.63" name="enterprise_id"/>
+	        <uca:customField value="6" name="gtrap_no"/>
+	        <uca:customField value="4" name="strap_no"/>
+	        <uca:customField value="bgpL2vpn_VPWS:1000364_197594157" name="reason_code"/>
+	        <uca:customField value=".1.3.6.1.4.1.664.5.63/6/1006301/bgpL2vpn_VPWS:1000364_197594157" name="EventName"/>
+	        <uca:customField value="50003/100/1" name="EventKey"/>
+	        <uca:customField value="9999999999" name="be_time_stamp"/>
+	        <uca:customField value="2IP490423" name="SeqNumber"/>
+	        <uca:customField value="false" name="isHealthCheckAlarm"/>
+	        <uca:customField value="DONE" name="IPAG_CORR_SyslogPollingOtherAlarmsCheck"/>
+	        <uca:customField value="CorrelatedBy=IPAG" name="SubscriptionInfo"/>
+	        <uca:customField value="DONE" name="IPAG_PublishAlarm"/>
+	        <uca:customField value="ETHERNET-NFO" name="classification"/>
+	        <uca:customField value="IPAG" name="domain"/>
+	        <uca:customField value="0" name="aging"/>
+	        <uca:customField value="deviceType=JUNIPER MX SERIES deviceModel=MX480 portAID=null" name="component"/>
+	        <uca:customField value="1371822254" name="last-update"/>
+	        <uca:customField value="ORLDFLPH51W" name="node-name"/>
+	        <uca:customField value="null-IPAG" name="sm-sourcedomain"/>
+	        <uca:customField value="PPORT" name="sm-class"/>
+	        <uca:customField value="" name="clli"/>
+	        <uca:customField value="" name="clfi"/>
+	        <uca:customField value="" name="clci"/>
+	        <uca:customField value="" name="bmp-clci"/>
+	        <uca:customField value="0.0" name="last-clear-time"/>
+	        <uca:customField value="" name="info1"/>
+	        <uca:customField value="" name="info2"/>
+	        <uca:customField value="" name="info3"/>
+	        <uca:customField value="" name="info"/>
+	        <uca:customField value="" name="evc-name"/>
+	        <uca:customField value="" name="acnaban"/>
+	        <uca:customField value="" name="sec-alarm-time"/>
+	        <uca:customField value="" name="ruby-delay"/>
+	        <uca:customField value="" name="reason"/>
+	        <uca:customField value="" name="customer"/>
+	        <uca:customField value="" name="sm-event-text"/>
+	        <uca:customField value="" name="xd-alarm-time"/>
+	        <uca:customField value="" name="cfm-alarm-time"/>
+	        <uca:customField value="" name="secondary-alert-id"/>
+	        <uca:customField value="" name="mcn"/>
+	        <uca:customField value="50003/100/1-150.0.0.212/5/0/0-IPAG01" name="alert-id"/>
+	        <uca:customField value="" name="circuit-id"/>
+	        <uca:customField value="" name="sm-event"/>
+	        <uca:customField value="12.123.80.143" name="remoteDeviceIpaddr"/>
+			<uca:customField value="2/0/3" name="remotePortId"/>
+			<uca:customField value="CIENA" name="remoteDeviceType"/>
+			<uca:customField value="JUNIPER MX SERIES" name="deviceType"/>
+			<uca:customField value="CE" name="nodeType"/>
+			<uca:customField value="25" name="portAid"/>            	        
+	    </uca:customFields>
+	</uca:AlarmCreationInterface> -->
+</uca:Alarms>

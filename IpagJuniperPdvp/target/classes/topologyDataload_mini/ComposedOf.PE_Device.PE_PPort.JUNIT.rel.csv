@@ -1,2 +1,0 @@
-@rel(Composed_Of)
-@from(PE_Device)key|@to(PE_PPort)key

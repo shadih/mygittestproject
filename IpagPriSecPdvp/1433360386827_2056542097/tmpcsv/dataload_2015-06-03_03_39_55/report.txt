@@ -1,0 +1,11 @@
+CSV Import from: C:\Users\SH1986\workspace\IpagPriSecPdvp_2015.07\.\1433360386827_2056542097\tmpcsv, at : Wed Jun 03 15:39:56 EDT 2015
+----------------
+PE_Card.node.csv: load is complete: 6 loaded successfully, 0 discarded, in 274 ms
+PE_Device.node.csv: load is complete: 3 loaded successfully, 0 discarded, in 33 ms
+PE_PPort.node.csv: load is complete: 4 loaded successfully, 0 discarded, in 27 ms
+PE_Slot.node.csv: load is complete: 6 loaded successfully, 0 discarded, in 25 ms
+ComposedOf.PE_Card.PE_PPort.rel.csv: load is complete: 5 loaded successfully, 0 discarded, in 18 ms
+ComposedOf.PE_Device.PE_Slot.rel.csv: load is complete: 6 loaded successfully, 0 discarded, in 22 ms
+ComposedOf.PE_Slot.PE_Card.rel.csv: load is complete: 6 loaded successfully, 0 discarded, in 30 ms
+---------
+Total: 36 nodes or relationships loaded (0 discarded), in 430 ms
