@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valuePackConfiguration xmlns="http://hp.com/uca/expert/config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	name="__PROJECT_NAME__" version="__PROJECT_VERSION__">
+	
+	<scenarios>
+		<scenario name="DecomposedAlarmVP.decomposedScenario">
+		<alarmEligibilityPolicy><![CDATA[NetworkState=="NOT_CLEARED"]]></alarmEligibilityPolicy>
+	        <eligibleForBroadcast>true</eligibleForBroadcast>
+	        <filterFile>src/main/resources/valuepack/decomposedScenario/filters.xml</filterFile>
+	        <mapperFile>src/main/resources/valuepack/decomposedScenario/mappers.xml</mapperFile>
+	        <fireAllRulesPolicy>EACH_ACCESS</fireAllRulesPolicy>
+	        <globals></globals>
+	        <processingMode>CLOUD</processingMode>
+	        <rulesFiles><rulesFile>
+			<filename>file:./src/main/resources/valuepack/decomposedScenario/rules.drl</filename>
+			<name>decomposedScenario rules</name>
+			<ruleFileType>DRL</ruleFileType>
+		</rulesFile></rulesFiles>
+	        <customLifeCycleClass>com.att.gfp.decomposed.decomposedScenario.DecomposedExtendedLifeCycle</customLifeCycleClass>
+		<compressionMode>false</compressionMode>
+		</scenario>
+	</scenarios>
+	
+	<mediationFlows>
+		<mediationFlow name="temipFlow" actionReference="TeMIP_FlowManagement" flowNameKey="flowName">	    
+			<!-- Comment out the flowCreation and flowDeletion sections to use static flows
+	         instead of dynamic flows -->
+	<!-- 		<flowCreation> -->
+	<!-- 			<actionParameter> -->
+	<!-- 				<key>operation</key> -->
+	<!-- 				<value>CreateFlow</value> -->
+	<!-- 			</actionParameter> -->
+	<!-- 			<actionParameter> -->
+	<!-- 				<key>flowType</key> -->
+	<!-- 				<value>dynamic</value>flowType can only be dynamic in the case of flowCreation -->
+	<!-- 			</actionParameter> -->
+	<!-- 			<actionParameter> -->
+	<!-- 				<key>operationContext</key> -->
+	<!-- 				<value>oc_xxx</value>a correct TeMIP Operation Context name -->
+	<!-- 			</actionParameter> -->
+	<!-- 		</flowCreation> -->
+	<!-- 		<flowDeletion> -->
+	<!-- 			<actionParameter> -->
+	<!-- 				<key>operation</key> -->
+	<!-- 				<value>DeleteFlow</value> -->
+	<!-- 			</actionParameter> -->
+	<!-- 			<actionParameter> -->
+	<!-- 				<key>flowType</key> -->
+	<!-- 				<value>dynamic</value>flowType can only be dynamic in the case of flowDeletion -->
+	<!-- 			</actionParameter> -->
+	<!-- 		</flowDeletion> -->
+			<flowResynchronization>
+				<actionParameter>
+					<key>operation</key>
+					<value>ResynchFlow</value>
+				</actionParameter>
+				<actionParameter>
+					<key>flowType</key>
+					<value>dynamic</value><!-- flowType can be either static or dynamic -->
+				</actionParameter>
+			</flowResynchronization>
+			<flowStatus>
+				<actionParameter>
+					<key>operation</key>
+					<value>StatusFlow</value>
+				</actionParameter>
+				<actionParameter>
+					<key>flowType</key>
+					<value>dynamic</value><!-- flowType can be either static or dynamic -->
+				</actionParameter>
+			</flowStatus>
+		</mediationFlow>
+	</mediationFlows>
+</valuePackConfiguration>

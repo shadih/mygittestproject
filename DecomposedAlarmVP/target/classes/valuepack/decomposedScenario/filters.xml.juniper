@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<filters xmlns="http://hp.com/uca/expert/filter">
+   <topFilter name="Ciena EventKey">
+		<anyCondition>
+<!--
+			<stringFilterStatement>
+				<fieldName>EventKey</fieldName>
+				<operator>isEqual</operator>
+				<fieldValue>50002/100/21</fieldValue>
+			</stringFilterStatement>
+-->
+			<stringFilterStatement>
+				<fieldName>EventKey</fieldName>
+				<operator>isEqual</operator>
+				<fieldValue>50003/100/19</fieldValue>
+			</stringFilterStatement>
+			<stringFilterStatement>
+				<fieldName>EventKey</fieldName>
+				<operator>isEqual</operator>
+				<fieldValue>50003/100/1</fieldValue>
+			</stringFilterStatement>
+			<stringFilterStatement>
+				<fieldName>EventKey</fieldName>
+				<operator>isEqual</operator>
+				<fieldValue>50003/100/6</fieldValue>
+			</stringFilterStatement>
+			<stringFilterStatement>
+				<fieldName>EventKey</fieldName>
+				<operator>isEqual</operator>
+				<fieldValue>50003/100/7</fieldValue>
+			</stringFilterStatement>
+			<stringFilterStatement>
+				<fieldName>EventKey</fieldName>
+				<operator>isEqual</operator>
+				<fieldValue>50003/100/23</fieldValue>
+			</stringFilterStatement>
+		</anyCondition>
+    </topFilter>
+</filters>
