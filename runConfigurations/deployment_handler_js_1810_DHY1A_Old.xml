@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="deployment-handler.js 1810 DHY1A Old" type="NodeJSConfigurationType" path-to-js-file="deployment-handler.js" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="CLOUDIFY" value="{&quot;cloudify&quot;:{&quot;protocol&quot;:&quot;http&quot;,&quot;user&quot;:&quot;admin&quot;,&quot;password&quot;:&quot;Cloudify_local&quot;,&quot;address&quot;:&quot;32.68.214.97&quot;,&quot;port&quot;:&quot;80&quot;}}" />
+      <env name="INVENTORY_PROTOCOL" value="https" />
+      <env name="USE_CONSUL" value="FALSE" />
+      <env name="NAMESPACE" value="ecomp." />
+      <env name="LISTEN_PORT" value="8188" />
+      <env name="INVENTORY_SERVICE_NAME" value="ecompc-invt-dev-s3" />
+      <env name="INVENTORY_SERVICE_NAME_SUFFIX" value="idns.cip.att.com" />
+      <env name="INVENTORY_SERVICE_SERVICE_PORT" value="8080" />
+      <env name="NODE_EXTRA_CA_CERTS" value="C:\Users\sh1986\Documents\ECOMP\cert\aafcacert.crt" />
+    </envs>
+    <method v="2" />
+  </configuration>
+</component>

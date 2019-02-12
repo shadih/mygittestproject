@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="deployment-handler.js 1810 FTL3C (CONSUL_HOST=zldcmtn23bdcc2cnsl00.707507.mtn23b.tci.att.com)" type="NodeJSConfigurationType" path-to-js-file="deployment-handler.js" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="CONSUL_HOST" value="zldcmtn23bdcc2cnsl00.707507.mtn23b.tci.att.com" />
+    </envs>
+    <method v="2" />
+  </configuration>
+</component>
