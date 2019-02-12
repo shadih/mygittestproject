@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/CpSyslogCollector/src/main/java/com/att/ecomp/dcae/cpsyslogcollector/CpSyslogCollector.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="DMAAP_HOST" value="uebsb91kcdc.it.att.com,uebsb92kcdc.it.att.com,uebsb93kcdc.it.att.com"/>
+<mapEntry key="DMAAP_TOPIC" value="SH1986-TEST-TOPIC-IN"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.att.ecomp.dcae.cpsyslogcollector.CpSyslogCollector"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-c etc/gfpSmlsCpSyslogCollectorConfig.json"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="CpSyslogCollector"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dlog_fl=&quot;logs/gfpSmlsCpSyslogCollector.log&quot;"/>
+</launchConfiguration>

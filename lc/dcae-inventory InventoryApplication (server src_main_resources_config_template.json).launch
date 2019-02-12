@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/dcae-inventory/src/main/java/org/onap/dcae/inventory/InventoryApplication.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="database_password" value="82481544f63cf798bf2a628df7be9588"/>
+<mapEntry key="database_url" value="jdbc:postgresql://zldcrdm5bdcc2-pstg-write.2f3fb3.rdm5b.tci.att.com:5432/dcae_inv"/>
+<mapEntry key="database_user" value="dcae_inv_user"/>
+<mapEntry key="server_adminConnectors_port" value="9081"/>
+<mapEntry key="server_applicationConnectors_keyStorePassword" value="opt/app/ecompc-certificate/password"/>
+<mapEntry key="server_applicationConnectors_keyStorePath" value="/opt/app/dcae-certificate/keystore.jks"/>
+<mapEntry key="server_applicationConnectors_port" value="9080"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.onap.dcae.inventory.InventoryApplication"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="server src/main/resources/config_template.json"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="dcae-inventory"/>
+</launchConfiguration>

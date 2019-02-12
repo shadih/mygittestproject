@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/updatesuppression/src/main/java/com/att/overland/updatesuppression/UpdateSuppression.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.att.overland.updatesuppression.UpdateSuppression"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-c etc/updatesuppression.json"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="updatesuppression"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-DFLATIRON_HOSTS=&quot;uebsb91kcdc.it.att.com:6167&quot; &#13;&#10;-DFLATIRON_SCOPE=overlandproto &#13;&#10;-DDCAE_UEB_URL=&quot;uebsb91kcdc.it.att.com:3904,uebsb921kcdc.it.att.com:3904,uebsb93kcdc.it.att.com:3904&quot;&#13;&#10;-DDCAE_TOPIC=DCAE-CLOSED-LOOP-EVENTS-shdev&#13;&#10;-DAOTS_UEB_URL=&quot;uebsb91kcdc.it.att.com:3904,uebsb921kcdc.it.att.com:3904,uebsb93kcdc.it.att.com:3904&quot;&#13;&#10;-DAOTS_TOPIC=AOTSCM-TKT-STATUS-TRANSITION-shdev&#13;&#10;-DLOG_DIR=logs&#13;&#10;-Dlog4j.configuration=file:etc/log4j.xml"/>
+</launchConfiguration>

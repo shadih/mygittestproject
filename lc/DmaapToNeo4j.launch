@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/dmaaptoneo4j/src/main/java/com/att/gfp/dmaaptoneo4j/DmaapToNeo4j.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="IPAG_HOST" value="rldh033.oss.att.com"/>
+<mapEntry key="ROADM_DMAAP_HOST" value="uebsb91kcdc.it.att.com,uebsb92kcdc.it.att.com,uebsb92kcdc.it.att.com"/>
+<mapEntry key="ROADM_DMAAP_PASSWD" value="rwwYEyt0"/>
+<mapEntry key="ROADM_DMAAP_TOPIC" value="com.att.dcae.roadm.st1.rootCauseL1"/>
+<mapEntry key="ROADM_DMAAP_USERNAME" value="m08255@data.gfp.att.com"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.att.gfp.dmaaptoneo4j.DmaapToNeo4j"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-c etc/dmaapToNeo4jConfig.json"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="dmaaptoneo4j"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dlog_fl=&quot;logs/dmaapToNeo4j.log&quot;"/>
+</launchConfiguration>
