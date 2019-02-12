@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<filters xmlns="http://hp.com/uca/expert/filter">
+
+	<topFilter name="AdtranTrapsCorrelator">
+      <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=Corr_Adt_two_traps,CORR_PRIORITY=14">
+		<anyCondition>
+			<allCondition tag="Trigger,CORR_KEY=ManagedInstnace,CORR_KEY2=remoteNode">  
+				<stringFilterStatement>    
+					<fieldName>originatingManagedEntity</fieldName>    
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>   
+				</stringFilterStatement>  
+ 				<stringFilterStatement>  
+					<fieldName>EventKey</fieldName>    
+					<operator>isEqual</operator>
+					<fieldValue>50001/100/3</fieldValue>  
+				</stringFilterStatement>       
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>  
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue> 
+				</stringFilterStatement> 
+				<stringFilterStatement>     
+					<fieldName>EventKey</fieldName>   
+					<operator>isListedIn</operator>  
+					<fieldValue>50001/100/3,50001/100/37</fieldValue> 
+				</stringFilterStatement>   
+			</allCondition>
+		</anyCondition>
+		</allCondition>
+	</topFilter>
+	<topFilter name="AdtranTrapsCorrelator">
+      <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=Corr_Adt_two_traps,CORR_PRIORITY=14">
+		<anyCondition>
+			<allCondition tag="Trigger,CORR_KEY=ManagedInstnace,CORR_KEY2=remoteNode">  
+				<stringFilterStatement>    
+					<fieldName>originatingManagedEntity</fieldName>    
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>   
+				</stringFilterStatement>  
+ 				<stringFilterStatement>  
+					<fieldName>EventKey</fieldName>    
+					<operator>isEqual</operator>
+					<fieldValue>50001/100/4</fieldValue>  
+				</stringFilterStatement>       
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>  
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue> 
+				</stringFilterStatement> 
+				<stringFilterStatement>   
+					<fieldName>EventKey</fieldName>    
+					<operator>isListedIn</operator>  
+					<fieldValue>50001/100/4,50001/100/38</fieldValue> 
+				</stringFilterStatement>   
+			</allCondition>
+		</anyCondition>
+		</allCondition>
+	</topFilter>
+	<topFilter name="AdtranTrapsCorrelator">
+      <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=Corr_Adt_one_trap,CORR_PRIORITY=14">
+		<anyCondition>
+			<allCondition tag="Trigger,CORR_KEY=ManagedInstnace,CORR_KEY2=remoteNode">  
+				<stringFilterStatement>    
+					<fieldName>originatingManagedEntity</fieldName>    
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>   
+				</stringFilterStatement>  
+ 				<stringFilterStatement>  
+					<fieldName>EventKey</fieldName>  
+					<operator>isEqual</operator>
+					<fieldValue>50001/100/1</fieldValue>  
+				</stringFilterStatement>       
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>  
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue> 
+				</stringFilterStatement> 
+				<stringFilterStatement>   
+					<fieldName>EventKey</fieldName>    
+					<operator>isListedIn</operator>    
+					<fieldValue>50001/100/1</fieldValue> 
+				</stringFilterStatement>   
+			</allCondition>
+		</anyCondition>
+		</allCondition>
+	</topFilter>
+	
+	<topFilter name="AdtranTrapsCorrelator">  
+     <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=Corr_Adt_LinkDown,CORR_PRIORITY=14">
+		<anyCondition>    
+			<allCondition  tag="Trigger,CORR_KEY=Device,CORR_KEY2=null">  
+			<anyCondition>
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>    
+					<fieldValue>PPORT</fieldValue>    
+				</stringFilterStatement>   
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>  
+					<fieldValue>CARD</fieldValue>    
+				</stringFilterStatement>
+			</anyCondition>    
+ 				<stringFilterStatement>       
+					<fieldName>EventKey</fieldName> 
+					<operator>isListedIn</operator>
+					<fieldValue>50001/100/7</fieldValue>  
+				</stringFilterStatement> 
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=Device,CORR_KEY2=null"> 
+			<anyCondition> 
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>  
+					<fieldValue>PPORT</fieldValue>    
+				</stringFilterStatement>     
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>  
+					<fieldValue>CARD</fieldValue>      
+				</stringFilterStatement>
+				</anyCondition>   
+				<stringFilterStatement>         
+					<fieldName>EventKey</fieldName>    
+					<operator>isListedIn</operator> 
+					<fieldValue>50001/100/10,50001/100/11,50001/100/85</fieldValue> 
+				</stringFilterStatement>    
+			</allCondition>
+		</anyCondition>
+		</allCondition>
+	</topFilter> 
+	<topFilter name="AdtLportPppLinkLcpCorrelator">  
+     <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=Corr_Adt_LPort,CORR_PRIORITY=14">
+		<anyCondition>    
+			<allCondition  tag="Trigger,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+			<anyCondition>
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>    
+					<fieldValue>LPORT</fieldValue>    
+				</stringFilterStatement>   
+			</anyCondition>    
+ 				<stringFilterStatement>       
+					<fieldName>EventKey</fieldName> 
+					<operator>isListedIn</operator>
+					<fieldValue>50001/100/82</fieldValue>  
+				</stringFilterStatement> 
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null"> 
+			<anyCondition> 
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>  
+					<fieldValue>LPORT</fieldValue>    
+				</stringFilterStatement>     
+				</anyCondition>   
+				<stringFilterStatement>         
+					<fieldName>EventKey</fieldName>  
+					<operator>isListedIn</operator> 
+					<fieldValue>50001/100/55,50001/100/56,50001/100/57,50001/100/58,50001/100/59</fieldValue> 
+				</stringFilterStatement>    
+			</allCondition>
+		</anyCondition>   
+		</allCondition>
+	</topFilter> 
+	<topFilter name="AdtLportNonPppLinkLcpCorrelator">  
+     <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=Corr_Adt_LPort,CORR_PRIORITY=14">
+		<anyCondition>    
+			<allCondition  tag="Trigger,SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+			<anyCondition>
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>    
+					<fieldValue>PORT</fieldValue>    
+				</stringFilterStatement>   
+			</anyCondition>    
+ 				<stringFilterStatement>       
+					<fieldName>EventKey</fieldName> 
+					<operator>isListedIn</operator>
+					<fieldValue>50001/100/78,50001/100/79,50001/100/80,50001/100/81</fieldValue>  
+				</stringFilterStatement> 
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null"> 
+			<anyCondition> 
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>  
+					<fieldValue>PORT</fieldValue>    
+				</stringFilterStatement>     
+				</anyCondition>   
+				<stringFilterStatement>         
+					<fieldName>EventKey</fieldName>  
+					<operator>isListedIn</operator> 
+					<fieldValue>50001/100/82,50001/100/55,50001/100/56,50001/100/57,50001/100/58,50001/100/59</fieldValue> 
+				</stringFilterStatement>    
+			</allCondition>
+		</anyCondition>   
+		</allCondition>
+	</topFilter> 
+	<topFilter name="AdtExecSuppress1020Problem">  
+     <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=Exec_Suppress_10_20,CORR_PRIORITY=16">
+		<anyCondition>    
+			<allCondition  tag="Trigger,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>  
+					<fieldValue>CARD</fieldValue>          
+				</stringFilterStatement>   
+ 				<stringFilterStatement>    
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>    
+					<fieldValue>50001/100/10,50001/100/20</fieldValue>       
+				</stringFilterStatement>    
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>    
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>CARD</fieldValue>    
+				</stringFilterStatement>    
+				<stringFilterStatement>                
+					<fieldName>EventKey</fieldName>        
+					<operator>isListedIn</operator>    
+					<fieldValue>50001/100/84,50001/100/85</fieldValue> 
+				</stringFilterStatement>    
+			</allCondition>
+		</anyCondition>
+		</allCondition>    
+	</topFilter> 
+   	<topFilter name="AdtLagCorrelator">  
+     <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=LAG_Corr,CORR_PRIORITY=14">
+		<anyCondition>    
+			<allCondition  tag="Trigger,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>  
+					<fieldValue>PPORT</fieldValue>    
+				</stringFilterStatement> 
+ 				<stringFilterStatement>    
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>  
+					<fieldValue>50001/100/60</fieldValue>    
+				</stringFilterStatement>  
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>    
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>  
+				</stringFilterStatement>       
+				<stringFilterStatement>       
+					<fieldName>EventKey</fieldName>        
+					<operator>isListedIn</operator>   
+					<fieldValue>50001/100/7</fieldValue>  
+				</stringFilterStatement>    
+			</allCondition>
+		</anyCondition>
+		</allCondition> 
+	</topFilter>  
+   	<topFilter name="AdtranTrapsCorrelator">  
+		<allCondition>    
+		<anyCondition> 
+		<allCondition>     
+			<stringFilterStatement>   
+				<fieldName>originatingManagedEntity</fieldName>
+				<operator>contains</operator>  
+				<fieldValue>PPORT</fieldValue>    
+			</stringFilterStatement> 
+				<stringFilterStatement>        
+				<fieldName>EventKey</fieldName>
+				<operator>isListedIn</operator>    
+				<fieldValue>50001/100/2,50001/100/8,50001/100/9,50001/100/29,50001/100/42,50001/100/43,50001/100/48,50001/100/55</fieldValue>   
+			</stringFilterStatement> 
+		</allCondition>  
+		<allCondition>     
+			<anyCondition>
+			<stringFilterStatement>   
+				<fieldName>originatingManagedEntity</fieldName>  
+				<operator>contains</operator>  
+				<fieldValue>DEVICE</fieldValue>    
+			</stringFilterStatement> 
+			<stringFilterStatement>   
+				<fieldName>originatingManagedEntity</fieldName>     
+				<operator>contains</operator>  
+				<fieldValue>EVC</fieldValue>    
+			</stringFilterStatement> 
+			</anyCondition>
+				<stringFilterStatement>        
+				<fieldName>EventKey</fieldName>  
+				<operator>isListedIn</operator>    
+				<fieldValue>50001/100/39</fieldValue>   
+			</stringFilterStatement> 
+		</allCondition>
+		<allCondition>     
+			<anyCondition>
+			<stringFilterStatement>   
+				<fieldName>originatingManagedEntity</fieldName>
+				<operator>contains</operator>    
+				<fieldValue>LPORT</fieldValue>    
+			</stringFilterStatement> 
+			<stringFilterStatement>   
+				<fieldName>originatingManagedEntity</fieldName>
+				<operator>contains</operator>    
+				<fieldValue>PPORT</fieldValue>    
+			</stringFilterStatement> 
+			</anyCondition>    
+			<stringFilterStatement>          
+				<fieldName>EventKey</fieldName>
+				<operator>isListedIn</operator>    
+				<fieldValue>50001/100/45,50001/100/46,50001/100/47,50001/100/48,50001/100/49,50001/100/50</fieldValue>   
+			</stringFilterStatement> 
+		</allCondition>  
+		<allCondition>     
+				<stringFilterStatement>        
+				<fieldName>EventKey</fieldName>
+				<operator>isListedIn</operator>     
+				<fieldValue>50004/2/1</fieldValue>    
+			</stringFilterStatement>   
+		</allCondition>  
+		</anyCondition>      
+		</allCondition>  
+	</topFilter>  	
+   	<topFilter name="AdtCfmCorrelator">  
+     <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=CFMEVC_Corr,CORR_PRIORITY=16">
+		<anyCondition>    
+			<allCondition  tag="Trigger,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>  
+					<fieldValue>EVC</fieldValue>    
+				</stringFilterStatement> 
+ 				<stringFilterStatement>    
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>  
+					<fieldValue></fieldValue>    
+				</stringFilterStatement>  
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>    
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>EVC</fieldValue>  
+				</stringFilterStatement>       
+				<stringFilterStatement>          
+					<fieldName>EventKey</fieldName>        
+					<operator>isListedIn</operator>    
+					<fieldValue></fieldValue>  
+				</stringFilterStatement>    
+			</allCondition>
+		</anyCondition>
+		</allCondition> 
+	</topFilter>  
+   	<topFilter name="AdtRGPPortCorrelator">  
+     <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=CFMEVC_Corr,CORR_PRIORITY=16">
+		<anyCondition>    
+			<allCondition  tag="Trigger,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>   
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>  
+					<fieldValue>PPORT</fieldValue>    
+				</stringFilterStatement> 
+ 				<stringFilterStatement>    
+					<fieldName>EventKey</fieldName>
+					<operator>isListedIn</operator>  
+					<fieldValue>50001/100/7</fieldValue>    
+				</stringFilterStatement>  
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+				<stringFilterStatement>    
+					<fieldName>originatingManagedEntity</fieldName>
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>  
+				</stringFilterStatement>       
+				<stringFilterStatement>         
+					<fieldName>EventKey</fieldName>         
+					<operator>isListedIn</operator>    
+					<fieldValue>50001/100/7</fieldValue>  
+				</stringFilterStatement>    
+			</allCondition>
+		</anyCondition>
+		</allCondition> 
+	</topFilter>  
+	<topFilter name="AdtranFruChildPortCorrelator">
+      <allCondition tag="TIME_LIMIT_SECOND=600,TRIGGER_PRIORITY=1,CORR_NAME=correlate-fru-with-childport-events,CORR_PRIORITY=14">
+		<anyCondition>
+			<allCondition tag="Trigger,CORR_KEY=ManagedInstnace,CORR_KEY2=remoteNode">  
+				<stringFilterStatement>    
+					<fieldName>originatingManagedEntity</fieldName>    
+					<operator>contains</operator>
+					<fieldValue>PPORT</fieldValue>   
+				</stringFilterStatement>  
+ 				<stringFilterStatement>   
+					<fieldName>EventKey</fieldName>    
+					<operator>isEqual</operator>
+					<fieldValue>50001/100/7</fieldValue>  
+				</stringFilterStatement>       
+			</allCondition>		 
+			<allCondition tag="SubAlarm,CORR_KEY=ManagedInstnace,CORR_KEY2=null">  
+			<anyCondition>
+			<stringFilterStatement>   
+				<fieldName>originatingManagedEntity</fieldName>
+				<operator>contains</operator>    
+				<fieldValue>CARD</fieldValue>    
+			</stringFilterStatement> 
+			<stringFilterStatement>   
+				<fieldName>originatingManagedEntity</fieldName>
+				<operator>contains</operator>    
+				<fieldValue>SLOT</fieldValue>    
+			</stringFilterStatement> 
+			</anyCondition>    
+				<stringFilterStatement>   
+					<fieldName>EventKey</fieldName>     
+					<operator>isListedIn</operator>  
+					<fieldValue>50003/100/12,50003/100/13,50003/100/14,50003/100/15,50003/100/16</fieldValue> 
+				</stringFilterStatement>   
+			</allCondition>
+		</anyCondition> 
+		</allCondition>
+	</topFilter>
+</filters>

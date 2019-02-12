@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Alarms xmlns="http://hp.com/uca/expert/x733Alarm">
+<AlarmCreationInterface xmlns="http://hp.com/uca/expert/x733Alarm">
+    <identifier>PPORT-12.123.80.143/25-1.3.6.1.4.1.664.5.59.1.10/6/3/NA</identifier>
+    <sourceIdentifier>adtran</sourceIdentifier>
+  <!--    <alarmRaisedTime>2013-06-03T19:52:29.000-04:00</alarmRaisedTime> -->
+    <originatingManagedEntity>PPORT 12.123.80.143/25</originatingManagedEntity>
+    <originatingManagedEntityStructure>
+        <classInstance instance="12.123.80.143/25" clazz="PPORT"/>
+    </originatingManagedEntityStructure>   
+    <alarmType>COMMUNICATIONS_ALARM</alarmType>  
+    <probableCause>Loss of Signal Alarm detected</probableCause>
+    <perceivedSeverity>MINOR</perceivedSeverity>
+    <networkState>NOT_CLEARED</networkState>
+    <operatorState>NOT_ACKNOWLEDGED</operatorState>
+    <problemState>NOT_HANDLED</problemState>
+    <specificProblem>SPECIFIC_PROBLEM</specificProblem>  
+    <additionalText>ADDITIONAL_TEXT</additionalText>
+    <notificationIdentifier>.1.3.6.1.4.1.664.5.59.1.10/6/3</notificationIdentifier>  
+    <customFields>
+        <customField value=".1.3.6.1.4.1.664.5.59.1.10" name="enterprise_id"/>
+        <customField value="6" name="gtrap_no"/>
+        <customField value="3" name="strap_no"/>
+        <customField value="NA" name="reason_code"/>
+        <customField value=".1.3.6.1.4.1.664.5.59.1.10/6/3/NA" name="EventName"/>
+        <customField value="50001/100/7" name="EventKey"/> 
+        <customField value="1376426081" name="be_time"/>
+        <customField value="false" name="isHealthCheckAlarm"/>
+        <customField value="604800" name="purge-interval"/>
+        <customField value="NFO-MOBILITY" name="classification"/>
+        <customField value="NTE" name="domain"/>  
+        <customField value="" name="clli"/>
+        <customField value="F101A/GE1N/RLGHNCMOABC/RLGHNCMOQIL" name="clfi"/>
+        <customField value="" name="clci"/>
+        <customField value="true" name="send-to-ruby"/> 
+        <customField value="0" name="aging"/>
+        <customField value="deviceType=CIENA NTE deviceModel=LE311V portAID=25 slot=252" name="component"/> 
+        <customField value="1376426081" name="last-update"/>
+        <customField value="RLGHNCMOQIL" name="node-name"/>
+        <customField value="null-NTE" name="sm-sourcedomain"/>
+        <customField value="PPORT" name="sm-class"/> 
+        <customField value="" name="bmp-clci"/>  
+        <customField value="0.0" name="last-clear-time"/>
+        <customField value="" name="info1"/>
+        <customField value="" name="info2"/>
+        <customField value="" name="info3"/>
+        <customField value="" name="info"/>
+        <customField value="" name="evc-name"/>
+        <customField value="" name="acnaban"/>
+        <customField value="" name="sec-alarm-time"/>
+        <customField value="" name="ruby-delay"/>
+        <customField value="" name="reason"/>
+        <customField value="" name="customer"/>
+        <customField value="" name="sm-event-text"/>
+        <customField value="" name="xd-alarm-time"/>
+        <customField value="" name="cfm-alarm-time"/>  
+        <customField value="" name="secondary-alert-id"/>
+        <customField value="" name="mcn"/>
+        <customField value="PPORT-10.204.160.118/25-1.3.6.1.4.1.664.5.59.1.10/6/3/NA" name="alert-id"/>
+        <customField value="" name="circuit-id"/>
+        <customField value="" name="sm-event"/>
+        <customField value="LE311V" name="DeviceModel"/> 
+        <customField value="ORLDFL32ZZP" name="DeviceName"/>  
+        <customField value="CIENA NTE" name="DeviceType"/> 
+        <customField value="12.123.80.143/2/0/3" name="RemotePportInstanceName"/> 
+        <customField value="ge-2/0/3" name="RemotePortId"/> 
+        <customField value="12.123.80.143" name="RemoteDeviceIpaddr"/> 
+        <customField value="IPAG" name="RemoteDataSource"/> 
+        <customField value="MX480" name="RemoteDeviceModel"/> 
+        <customField value="ORLDFL32ZZ4" name="RemoteDeviceName"/> 
+        <customField value="JUNIPER MX SERIES" name="RemoteDeviceType"/> 
+                <customField value="1377629315" name="fe_time_stamp"/>
+    </customFields>  
+</AlarmCreationInterface> 
+</Alarms>

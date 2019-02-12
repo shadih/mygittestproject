@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uca:Alarms xmlns:uca="http://hp.com/uca/expert/x733Alarm" xmlns="http://hp.com/uca/expert/x733Alarm">
+
+	<uca:AlarmCreationInterface>
+		<uca:identifier>operation_context .uca_network alarm_object 281</uca:identifier>
+		<uca:sourceIdentifier>TeMIP EMS</uca:sourceIdentifier>
+		<uca:alarmRaisedTime>2010-09-16T14:36:23.027+02:00</uca:alarmRaisedTime>
+		<uca:originatingManagedEntity>bsc .skeleton bts AM-MNS-DPD-PE-RT-52</uca:originatingManagedEntity>
+		<uca:originatingManagedEntityStructure>
+			<uca:classInstance clazz="bsc" instance=".skeleton"/>
+			<uca:classInstance clazz="bts" instance="AM-MNS-DPD-PE-RT-52"/>
+		</uca:originatingManagedEntityStructure>
+		<uca:alarmType>COMMUNICATIONS_ALARM</uca:alarmType>
+		<uca:probableCause>CommunicationsSubsystemFailure</uca:probableCause>
+		<uca:perceivedSeverity>MINOR</uca:perceivedSeverity>
+		<uca:networkState>NOT_CLEARED</uca:networkState>
+		<uca:operatorState>ACKNOWLEDGED</uca:operatorState>
+		<uca:problemState>NOT_HANDLED</uca:problemState>
+		<uca:problemInformation>Attribute not available</uca:problemInformation>
+		<uca:specificProblem>Attribute not available</uca:specificProblem>
+		<uca:additionalText>Attribute not available</uca:additionalText>
+		<uca:correlationNotificationIdentifiers>Attribute not available</uca:correlationNotificationIdentifiers>
+		<uca:customFields>
+			<uca:customField name="acknowledgementUserIdentifier" value="UCA Expert"/>
+			<uca:customField name="originalSeverity" value="Minor"/>
+			<uca:customField name="domain" value=".uca_pit_dom"/>
+		</uca:customFields>
+	</uca:AlarmCreationInterface>
+<uca:AlarmCreationInterface>
+		<uca:identifier>operation_context .uca_network alarm_object 278</uca:identifier>
+		<uca:sourceIdentifier>TeMIP EMS</uca:sourceIdentifier>
+		<uca:alarmRaisedTime>2010-09-16T14:36:20.290+02:00</uca:alarmRaisedTime>
+		<uca:originatingManagedEntity>bsc .skeleton bts AM-MNS-DPD-PE-RT-52</uca:originatingManagedEntity>
+		<uca:originatingManagedEntityStructure>
+			<uca:classInstance clazz="bsc" instance=".skeleton"/>
+			<uca:classInstance clazz="bts" instance="AM-MNS-DPD-PE-RT-52"/>
+		</uca:originatingManagedEntityStructure>
+		<uca:alarmType>COMMUNICATIONS_ALARM</uca:alarmType>
+		<uca:probableCause>CommunicationsSubsystemFailure</uca:probableCause>
+		<uca:perceivedSeverity>CRITICAL</uca:perceivedSeverity>
+		<uca:networkState>NOT_CLEARED</uca:networkState>
+		<uca:operatorState>ACKNOWLEDGED</uca:operatorState>
+		<uca:problemState>NOT_HANDLED</uca:problemState>
+		<uca:problemInformation>Attribute not available</uca:problemInformation>
+		<uca:specificProblem>Attribute not available</uca:specificProblem>
+		<uca:additionalText>Attribute not available</uca:additionalText>
+		<uca:correlationNotificationIdentifiers>Attribute not available</uca:correlationNotificationIdentifiers>
+		<uca:customFields>
+			<uca:customField name="acknowledgementUserIdentifier" value="UCA Expert"/>
+			<uca:customField name="originalSeverity" value="Critical"/>
+			<uca:customField name="domain" value=".uca_pit_dom"/>
+		</uca:customFields>
+	</uca:AlarmCreationInterface>	
+</uca:Alarms>

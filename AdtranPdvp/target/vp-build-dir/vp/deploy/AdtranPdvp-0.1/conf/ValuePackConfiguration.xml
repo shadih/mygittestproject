@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valuePackConfiguration xmlns="http://hp.com/uca/expert/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	name="AdtranPdvp" version="0.1">
+	<scenarios>
+		<scenario name="com.hp.uca.expert.vp.pd.ProblemDetection">
+			<actionRetractedAutomaticallyWhenCompleted>true</actionRetractedAutomaticallyWhenCompleted>
+			<alarmEligibilityPolicy><![CDATA[NetworkState=="NOT_CLEARED"]]></alarmEligibilityPolicy>
+			<asyncActionPeriod>1000</asyncActionPeriod>
+			<clockTypeMode>NORMAL</clockTypeMode>
+			<eligibleForBroadcast>true</eligibleForBroadcast> 
+			<filterFile>deploy/AdtranPdvp-0.1/pd/ProblemDetection_filters.xml</filterFile>
+			<filterTagsFile>deploy/AdtranPdvp-0.1/pd/ProblemDetection_filtersTags.xml</filterTagsFile>					
+			<fireAllRulePeriod>1000</fireAllRulePeriod>
+			<fireAllRulesDuringResynchronization>false</fireAllRulesDuringResynchronization>
+			<fireAllRulesPolicy>WATCHDOG</fireAllRulesPolicy>
+			<globals></globals>
+			<processingMode>CLOUD</processingMode>    
+			<rulesFiles>
+				<rulesFile> 
+					<filename>file:./deploy/AdtranPdvp-0.1/pd/ProblemDetection_Rules.pkg</filename>
+					<name>Problem Detection Rules</name>
+					<ruleFileType>PKG</ruleFileType>
+				</rulesFile>
+			</rulesFiles>
+			<tickPeriod>30000</tickPeriod>
+	        <customLifeCycleClass>com.hp.uca.expert.vp.pd.problem.AdtranCorrelationExtendedLifeCycle</customLifeCycleClass>
+			<customInitializationClass>com.hp.uca.expert.vp.pd.core.PD_Initialization</customInitializationClass>
+			<compressionMode>false</compressionMode>  
+			<compressionPeriod>1000</compressionPeriod>
+		</scenario>		
+	</scenarios><!--
+	<mediationFlows>
+		<mediationFlow name="temipFlow" actionReference="TeMIP_FlowManagement" flowNameKey="flowName">
+			 Comment out the flowCreation and flowDeletion sections to use static flows
+	         instead of dynamic flows 
+			<flowCreation>
+				<actionParameter>
+					<key>operation</key>
+					<value>CreateFlow</value>
+				</actionParameter>
+				<actionParameter>
+					<key>flowType</key>
+					<value>dynamic</value> flowType can only be dynamic in the case of flowCreation 
+				</actionParameter>
+				<actionParameter>
+					<key>operationContext</key>
+					<value>uca_network</value>
+				</actionParameter>
+				<actionParameter>
+					<key>operationContext</key>
+					<value>uca_pbalarm</value>
+				</actionParameter>
+			</flowCreation>
+			<flowDeletion>
+				<actionParameter>
+					<key>operation</key>
+					<value>DeleteFlow</value>
+				</actionParameter>
+				<actionParameter>
+					<key>flowType</key>
+					<value>dynamic</value> flowType can only be dynamic in the case of flowDeletion 
+				</actionParameter>
+			</flowDeletion>
+			<flowResynchronization>
+				<actionParameter>
+					<key>operation</key>
+					<value>ResynchFlow</value>
+				</actionParameter>
+				<actionParameter>
+					<key>flowType</key>
+					<value>dynamic</value> flowType can be either static or dynamic 
+				</actionParameter>
+			</flowResynchronization>
+			<flowStatus>
+				<actionParameter>
+					<key>operation</key>
+					<value>StatusFlow</value>
+				</actionParameter>
+				<actionParameter>
+					<key>flowType</key>
+					<value>dynamic</value> flowType can be either static or dynamic 
+				</actionParameter>
+			</flowStatus>
+		</mediationFlow>  
+	</mediationFlows>
+--></valuePackConfiguration>
