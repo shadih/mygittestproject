@@ -1,0 +1,36 @@
+<settings>
+	<profiles>
+		<profile>
+			<id>usual</id>
+			<repositories>
+				<repository>
+					<id>sa2020</id>
+					<name>Service Assurance 2020 systems</name>
+					<url>http://mavencentral.it.att.com:8084/nexus/content/groups/2020SAPC</url>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+
+	<activeProfiles>
+		<activeProfile>usual</activeProfile>
+	</activeProfiles>
+
+	<mirrors>
+		<mirror>
+			<id>ATT-Public</id>
+			<name>ATT Central Public</name>
+			<url>http://mavencentral.it.att.com:8084/nexus/content/groups/att-public-group</url>
+			<mirrorOf>central</mirrorOf>
+		</mirror>
+	</mirrors>
+
+<servers>
+	<server>
+ 		<id>nexus</id>
+  		<username>m02081</username>
+  <password>Gfp-Data@020</password>
+	</server>
+</servers>
+
+</settings>
