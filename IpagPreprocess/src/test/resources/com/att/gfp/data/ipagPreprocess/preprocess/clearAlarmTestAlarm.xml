@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<Alarms xmlns="http://hp.com/uca/expert/x733Alarm">
+
+<AlarmCreationInterface xmlns="http://hp.com/uca/expert/x733Alarm">
+    <identifier>PPORT-10.204.160.81/SM-A/1-.1.3.6.1.4.1.664.5.63/6/1006301/NA</identifier>
+    <sourceIdentifier>adtran</sourceIdentifier>
+    <alarmRaisedTime>2013-04-11T13:31:29</alarmRaisedTime>    
+    <originatingManagedEntity>PPORT 10.204.160.81/SM-A/1</originatingManagedEntity>
+    <originatingManagedEntityStructure>
+        <classInstance instance="10.204.160.81/SM-A/1" clazz="PPORT"/>
+    </originatingManagedEntityStructure>    
+    <alarmType>COMMUNICATIONS_ALARM</alarmType>
+    <probableCause>Set single service state msg failed; Product: prodname1</probableCause>
+    <perceivedSeverity>MAJOR</perceivedSeverity>
+    <networkState>NOT_CLEARED</networkState>
+    <operatorState>NOT_ACKNOWLEDGED</operatorState>
+    <problemState>NOT_HANDLED</problemState>
+    <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+    <additionalText>"firstActive"</additionalText>
+    <notificationIdentifier>.1.3.6.1.4.1.664.1.896/6/19</notificationIdentifier>
+    <customFields>
+        <customField value=".1.3.6.1.4.1.664.1.896" name="enterprise_id"/>
+        <customField value="6" name="gtrap_no"/>
+        <customField value="1006301" name="strap_no"/>
+        <customField value="NA" name="reason_code"/>
+        <customField value=".1.3.6.1.4.1.664.1.896/6/19/NA" name="EventName"/>
+        <customField value=".1.3.6.1.4.1.664.1.896/6/19" name="EventKey"/>
+        <customField value="1365687089" name="be_time"/>
+        <customField value="1370289169" name="fe_time_stamp"/>  
+        <customField value="AD11578" name="SeqNumber"/> 
+        <customField value="Slot=&lt;17&gt;_1" name="component"/>
+        <customField value="Set single service state msg failed; Product: prodname1" name="reason"/>
+        <customField value="false" name="isHealthCheckAlarm"/>
+    </customFields>
+</AlarmCreationInterface>
+
+</Alarms>
+
+ <!--
+ /home/utm/data/2013-05-15_15_04_48
+Manjiri Kamat says  (to all):
+Please use the following directory for csv files: 
+/home/utm/data/2013-04-30_16_18_52
+Manjiri Kamat says  (to all):
+The other one has production data
+ 
+ if subclass is not in topology and the device is
+ <originatingManagedEntity>ATT-UVERSE-DEVICE 10.204.183.95/17/1</originatingManagedEntity>
+    
+ if device is not in topology
+  suppress
+ -->
+

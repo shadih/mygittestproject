@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Alarms xmlns="http://hp.com/uca/expert/x733Alarm">
+    <AlarmDeletionInterface>
+        <identifier>2</identifier>
+    </AlarmDeletionInterface>    
+</Alarms>
+

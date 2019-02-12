@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valuePackConfiguration xmlns="http://hp.com/uca/expert/config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	name="ipagPreprocess" version="0.12">
+	  
+	<scenarios>
+		<scenario name="ipagPreprocess.preprocess">
+		<automaticRefreshOnConfigurationChange>true</automaticRefreshOnConfigurationChange>
+		<alarmEligibilityPolicy> NetworkState!=&quot;CLEARED&quot; </alarmEligibilityPolicy>
+	        <filterFile>deploy/ipagPreprocess-0.12/preprocess/filters.xml</filterFile>
+	        <mapperFile>deploy/ipagPreprocess-0.12/preprocess/mappers.xml</mapperFile>
+	        <fireAllRulesPolicy>EACH_ACCESS</fireAllRulesPolicy>
+	        <globals></globals>
+	        <processingMode>CLOUD</processingMode>
+	        <rulesFiles>
+			<rulesFile>
+				<filename>file:./deploy/ipagPreprocess-0.12/preprocess/preProcess_rules.drl</filename>
+				<name>preprocess rules</name>
+				<ruleFileType>DRL</ruleFileType>
+			</rulesFile>   
+		</rulesFiles>
+		<tickPeriod>30000</tickPeriod>
+		<customLifeCycleClass>com.att.gfp.data.ipagPreprocess.preprocess.ExtendedLifeCycle</customLifeCycleClass>
+		<customInitializationClass>com.att.gfp.data.ipagPreprocess.preprocess.PreprocessInitialization</customInitializationClass>
+		</scenario>
+	</scenarios> 
+</valuePackConfiguration>

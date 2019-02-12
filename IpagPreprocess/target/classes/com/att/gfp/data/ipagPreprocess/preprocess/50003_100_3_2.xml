@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Alarms xmlns="http://hp.com/uca/expert/x733Alarm">
+<AlarmCreationInterface xmlns="http://hp.com/uca/expert/x733Alarm">
+    <identifier>1IP343894</identifier>
+    <sourceIdentifier>ipag</sourceIdentifier>
+    <alarmRaisedTime>2013-06-04T15:11:17</alarmRaisedTime>   
+    <originatingManagedEntity>PPORT 10.204.160.118/25</originatingManagedEntity>
+    <originatingManagedEntityStructure>
+        <classInstance instance="10.204.160.118/25" clazz="PPORT"/>
+    </originatingManagedEntityStructure>
+    <alarmType>COMMUNICATIONS_ALARM</alarmType>
+    <probableCause>neighbor state= done</probableCause>
+    <perceivedSeverity>MAJOR</perceivedSeverity>
+    <networkState>NOT_CLEARED</networkState>
+    <operatorState>NOT_ACKNOWLEDGED</operatorState>
+    <problemState>NOT_HANDLED</problemState>
+    <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+    <additionalText>ADDITIONAL_TEXT</additionalText>
+    <notificationIdentifier>.1.3.6.1.2.1.14.16.2/6/2</notificationIdentifier>
+    <customFields>
+        <customField value=".1.3.6.1.2.1.14.16.2" name="enterprise_id"/>
+        <customField value="6" name="gtrap_no"/>
+        <customField value="2" name="strap_no"/>
+        <customField value="NA" name="reason_code"/>
+        <customField value=".1.3.6.1.2.1.14.16.2/6/2/NA" name="EventName"/>
+	<customField value=".1.3.6.1.2.1.14.16.2/6/2" name="EventKey"/>
+        <customField value="1370358677" name="be_time"/>
+        <customField value="false" name="isHealthCheckAlarm"/>
+    </customFields>
+</AlarmCreationInterface>
+</Alarms>

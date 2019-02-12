@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<Alarms xmlns="http://hp.com/uca/expert/x733Alarm">
+
+<AlarmCreationInterface xmlns="http://hp.com/uca/expert/x733Alarm">
+    <identifier>PPORT-10.204.66.237/101-.1.3.6.1.4.1.664.5.67.1.32.1/6/3/NA</identifier>
+    <sourceIdentifier>adtran</sourceIdentifier>
+    <alarmRaisedTime>2013-04-11T13:41:53</alarmRaisedTime>
+    <originatingManagedEntity>PPORT 10.204.66.237/101</originatingManagedEntity>
+    <originatingManagedEntityStructure>
+        <classInstance instance="10.204.66.237/101" clazz="PPORT"/>
+    </originatingManagedEntityStructure>
+    <alarmType>COMMUNICATIONS_ALARM</alarmType>
+    <probableCause>TA5000 Switch Module: Port Mode Mismatch Alarm Active</probableCause>
+    <perceivedSeverity>MINOR</perceivedSeverity>
+    <networkState>NOT_CLEARED</networkState>
+    <operatorState>NOT_ACKNOWLEDGED</operatorState>
+    <problemState>NOT_HANDLED</problemState>
+    <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+    <additionalText>ADDITIONAL_TEXT</additionalText>
+    <notificationIdentifier>.1.3.6.1.4.1.664.5.67.1.32.1/6/3</notificationIdentifier>
+    <customFields>
+        <customField value=".1.3.6.1.4.1.664.5.67.1.32.1" name="enterprise_id"/>
+        <customField value="6" name="gtrap_no"/>
+        <customField value="3" name="strap_no"/>
+        <customField value="NA" name="reason_code"/>
+        <customField value=".1.3.6.1.4.1.664.5.67.1.32.1/6/3/NA" name="EventName"/>
+        <customField value=".1.3.6.1.4.1.664.5.67.1.32.1/6/3" name="EventKey"/>
+        <customField value="1365687713" name="be_time"/>
+        <customField value="AD11714" name="SeqNumber"/>
+        <customField value="Slot=&lt;1&gt;_3" name="component"/>
+        <customField value="TA5000 Switch Module: Port Mode Mismatch Alarm Active" name="reason"/>
+        <customField value="false" name="isHealthCheckAlarm"/>
+    </customFields>
+</AlarmCreationInterface>
+
+</Alarms>
+

@@ -1,8 +1,0 @@
-@ref(networkElement)|@const(IpagSlot)class
-@index(PE_Slot)key|TDL_instance_name|key|alarm_classification|alarm_domain|data_source|is_operational|legacy_org_ind|slot_number|slot_name
-143.0.68.228/0|143.0.68.228/0|143.0.68.228/0|ETHERNET-NFO|IPAG|IPAG|true|S|0|DPC0
-143.0.68.228/1|143.0.68.228/1|143.0.68.228/1|ETHERNET-NFO|IPAG|IPAG|true|S|0|DPC0
-149.0.3.212/0|149.0.3.212/0|149.0.3.212/0|ETHERNET-NFO|IPAG|IPAG|true|S|0|DPC0
-149.0.3.212/1|149.0.3.212/1|149.0.3.212/1|ETHERNET-NFO|IPAG|IPAG|true|S|0|DPC0
-149.9.0.1/0|149.9.0.1/0|149.9.0.1/0|ETHERNET-NFO|IPAG|IPAG|true|S|0|DPC0
-149.9.0.1/1|149.9.0.1/1|149.9.0.1/1|ETHERNET-NFO|IPAG|IPAG|true|S|0|DPC0

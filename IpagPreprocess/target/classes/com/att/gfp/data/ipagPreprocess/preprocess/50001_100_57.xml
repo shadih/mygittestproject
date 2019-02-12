@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<Alarms xmlns="http://hp.com/uca/expert/x733Alarm">
+
+<AlarmCreationInterface xmlns="http://hp.com/uca/expert/x733Alarm">
+    <identifier>PPORT-192.168.113.180/21/9-.1.3.6.1.4.1.664.1.896/6/21/NA</identifier>
+    <sourceIdentifier>adtran</sourceIdentifier>
+    <alarmRaisedTime>2013-04-11T21:15:52</alarmRaisedTime>
+    <originatingManagedEntity>PPORT 192.168.113.180/21/9</originatingManagedEntity>
+    <originatingManagedEntityStructure>
+        <classInstance instance="192.168.113.180/21/9" clazz="PPORT"/>
+    </originatingManagedEntityStructure>
+    <alarmType>COMMUNICATIONS_ALARM</alarmType>
+    <probableCause>DS3: AIS Alarm Active</probableCause>
+    <perceivedSeverity>MAJOR</perceivedSeverity>
+    <networkState>NOT_CLEARED</networkState>
+    <operatorState>NOT_ACKNOWLEDGED</operatorState>
+    <problemState>NOT_HANDLED</problemState>
+    <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+    <additionalText>ADDITIONAL_TEXT</additionalText>
+    <notificationIdentifier>.1.3.6.1.4.1.664.1.896/6/21</notificationIdentifier>
+    <customFields>
+        <customField value=".1.3.6.1.4.1.664.1.896" name="enterprise_id"/>
+        <customField value="6" name="gtrap_no"/>
+        <customField value="21" name="strap_no"/>
+        <customField value="NA" name="reason_code"/>
+        <customField value=".1.3.6.1.4.1.664.1.896/6/21/NA" name="EventName"/>
+        <customField value=".1.3.6.1.4.1.664.1.896/6/21" name="EventKey"/>
+        <customField value="1365714952" name="be_time"/>
+        <customField value="AD20672" name="SeqNumber"/>
+        <customField value="Slot=&lt;1&gt; Port=&lt;1&gt;" name="component"/>
+        <customField value="DS3: AIS Alarm Active" name="reason"/>
+        <customField value="false" name="isHealthCheckAlarm"/>
+    </customFields>
+</AlarmCreationInterface>
+
+
+</Alarms>
+

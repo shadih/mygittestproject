@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alarms xmlns="http://hp.com/uca/expert/x733Alarm">
+<AlarmCreationInterface xmlns="http://hp.com/uca/expert/x733Alarm"> 
+    <identifier>PPORT-10.204.65.149/25-.1.3.6.1.4.1.664.5.63/6/1006329/NA</identifier>
+    <sourceIdentifier>adtran</sourceIdentifier>
+    <alarmRaisedTime>2013-08-27T18:48:37</alarmRaisedTime>
+    <originatingManagedEntity>PPORT 10.204.65.149/25</originatingManagedEntity>
+    <originatingManagedEntityStructure>
+        <classInstance instance="10.204.65.149/25" clazz="PPORT"/>
+    </originatingManagedEntityStructure>
+    <alarmType>COMMUNICATIONS_ALARM</alarmType>
+    <probableCause>Power Shedding Input Asserted, Alarm Input: External 3, Alarm Description: SheddingInputAsserted alarm, CountDown 5</probableCause>
+    <perceivedSeverity>CLEAR</perceivedSeverity>
+    <networkState>NOT_CLEARED</networkState>
+    <operatorState>NOT_ACKNOWLEDGED</operatorState> 
+    <problemState>NOT_HANDLED</problemState>
+    <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+    <additionalText>ADDITIONAL_TEXT</additionalText>
+    <notificationIdentifier>.1.3.6.1.4.1.664.5.63/6/1006329</notificationIdentifier>
+    <customFields>
+        <customField value=".1.3.6.1.4.1.664.5.63" name="enterprise_id"/>
+        <customField value="6" name="gtrap_no"/>
+        <customField value="1006329" name="strap_no"/>
+        <customField value="NA" name="reason_code"/>
+        <customField value=".1.3.6.1.4.1.664.5.63/6/1006329/NA" name="EventName"/>
+        <customField value=".1.3.6.1.4.1.664.5.63/6/1006329" name="EventKey"/>
+        <customField value="1377629317" name="be_time_stamp"/>
+        <customField value="1377629317" name="fe_time_stamp"/>
+        <customField value="" name="component"/>
+        <customField value="AD17368" name="SeqNumber"/>
+        <customField value="false" name="isHealthCheckAlarm"/>
+    </customFields>
+</AlarmCreationInterface>
+</Alarms> 
+
+
