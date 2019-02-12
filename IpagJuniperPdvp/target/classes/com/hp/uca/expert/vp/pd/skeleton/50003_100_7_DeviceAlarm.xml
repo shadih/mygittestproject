@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alarms xmlns:uca="http://hp.com/uca/expert/x733Alarm" xmlns="http://hp.com/uca/expert/x733Alarm">
+ <AlarmCreationInterface xmlns="http://hp.com/uca/expert/x733Alarm">
+     <identifier>EVCNODE-12.82.0.59/VPWS:55545-.1.3.6.1.4.1.2636.3.26/6/2/3089</identifier>
+      <sourceIdentifier>ipag</sourceIdentifier>
+        <originatingManagedEntity>EVCNODE 12.82.0.59/VPWS:55545</originatingManagedEntity>     
+      <originatingManagedEntityStructure>
+               <classInstance instance="12.82.0.59" clazz="DEVICE"/>     
+               </originatingManagedEntityStructure>     
+      <alarmType>COMMUNICATIONS_ALARM</alarmType>     
+      <probableCause>Down VRF=&lt;VPWS:55545&gt; Region=&lt;S&gt;</probableCause>     
+      <perceivedSeverity>CRITICAL</perceivedSeverity>     
+      <networkState>NOT_CLEARED</networkState>     
+      <operatorState>NOT_ACKNOWLEDGED</operatorState>     
+      <problemState>NOT_HANDLED</problemState>     
+      <specificProblem>SPECIFIC_PROBLEM</specificProblem>     
+      <additionalText>ADDITIONAL_TEXT</additionalText>     
+      <notificationIdentifier>.1.3.6.1.4.1.2636.3.26/6/2</notificationIdentifier>     
+      <customFields>
+               <customField value=".1.3.6.1.4.1.2636.3.26" name="enterprise_id"/>         
+               <customField value="6" name="gtrap_no"/>         
+               <customField value="2" name="strap_no"/>         
+               <customField value="3089" name="reason_code"/>         
+               <customField value=".1.3.6.1.4.1.2636.3.26/6/2/3089" name="EventName"/>         
+               <customField value="50003/100/7" name="EventKey"/>         
+               <customField value="1408841748" name="fe_time_stamp"/>         
+               <customField value="1408841748" name="be_time_stamp"/>         
+               <customField value="deviceType=&lt;JUNIPER MX SERIES&gt; deviceModel=&lt;MX480&gt; VPN IF Name VPWS:55545, Type bgpL2vpn, Interface 3089" name="component"/>         
+               <customField value="2IP18167" name="SeqNumber"/>         
+               <customField value="" name="G2Suppress"/>         
+               <customField value="false" name="isHealthCheckAlarm"/>         
+               <customField value="false" name="SuppressPport"/>         
+               <customField value="false" name="SuppressDevice"/>         
+               <customField value="ETHERNET-NFO" name="classification"/>         
+               <customField value="IPAG" name="domain"/>         
+               <customField value="PTNII=&lt;RBACA301IA1&gt;" name="info3"/>         
+               <customField value="true" name="send-to-ruby"/>         
+               <customField value="7200000" name="purge-interval"/>         
+               <customField value="0" name="aging"/>         
+               <customField value="1408841749" name="last-update"/>         
+               <customField value="RBRNCA1105W" name="node-name"/>         
+               <customField value="IPAG" name="sm-sourcedomain"/>         
+               <customField value="DEVICE" name="sm-class"/>         
+               <customField value="" name="clli"/>         
+               <customField value="" name="clfi"/>         
+               <customField value="" name="clci"/>         
+               <customField value="" name="bmp-clci"/>         
+               <customField value="0" name="last-clear-time"/>         
+               <customField value="" name="info1"/>         
+               <customField value="" name="info2"/>         
+               <customField value="" name="info"/>         
+               <customField value="" name="evc-name"/>         
+               <customField value="" name="acnaban"/>         
+               <customField value="" name="sec-alarm-time"/>         
+               <customField value="" name="ruby-delay"/>         
+               <customField value="Down VRF=&lt;VPWS:55545&gt; Region=&lt;S&gt;" name="reason"/>        
+                <customField value="" name="customer"/>         
+                <customField value="" name="sm-event-text"/>         
+                <customField value="" name="xd-alarm-time"/>         
+                <customField value="" name="cfm-alarm-time"/>         
+                <customField value="" name="secondary-alert-id"/>         
+                <customField value="" name="mcn"/>         
+                <customField value="50003/100/7-12.82.74.16-3089" name="alert-id"/>         
+                <customField value="" name="circuit-id"/>         
+                <customField value="" name="sm-event"/>         
+                <customField value="" name="SecondaryTimeStamp"/>         
+                <customField value="" name="SecondarySourceDomain"/>         
+                <customField value="false" name="isGeneratedByDecomposition"/>
+                <customField name="nodeType" value="PE"/> 
+ 				<customField name="deviceType" value=" JUNIPER MX SERIES"/> 
+  				<customField name="deviceLevelExists" value="true"/> 
+  				<customField name="deviceName" value="RBRNCA1105W"/> 
+  				<customField name="deviceModel" value="MX480"/>      
+         </customFields> 
+     </AlarmCreationInterface>
+</Alarms>

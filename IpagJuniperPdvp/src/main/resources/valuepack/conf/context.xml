@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:amq="http://activemq.apache.org/schema/core" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/jms 
+                           http://www.springframework.org/schema/jms/spring-jms.xsd
+                           http://activemq.apache.org/schema/core 
+                           http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+
+	<context:annotation-config />
+
+	<!-- <bean id="enrichment" class="com.acme.enrichment.EnrichmentProperties">
+		<property name="configurationFileName" value="Enrichment.xml" />
+		<property name="jmxManager" ref="jmxManager" />
+	</bean> -->
+
+	<bean id="CypherEngine" class="com.att.gfp.helper.CypherEngine"></bean>
+	
+	<bean id="problemsFactory" class="com.hp.uca.expert.vp.pd.core.ProblemsFactory">
+		<property name="problemPackageName" value="com.hp.uca.expert.vp.pd.problem." />
+		<property name="problemClassNamePrefix" value="" />
+		<property name="problemClassName" value="JuniperLinkDown_ProblemDefault" />
+		<property name="generalBehaviorClassName" value="GeneralBehaviorDefault" />		
+		<property name="xmlProblemClassName" value="XmlProblem" />
+		<property name="xmlGenericDefaultPrefix" value="xml" />
+		<property name="problemContextPackage" value="com.hp.uca.expert.vp.pd.core." />
+		<property name="configurationFile" value="deploy/IpagJuniperPdvp-0.6/conf/ProblemXmlConfig.xml" />		
+	</bean>
+
+<!--  	<bean name="forwardedAlarmsFile" class="java.io.File">
+		<constructor-arg index="0">
+			<value>./logs/Forwarded-alarms-ToNOM.xml</value>
+		</constructor-arg>
+	</bean> 
+
+   	<bean id="alarmForwarder" class="com.hp.uca.expert.alarm.FileAlarmForwarder" depends-on="forwardedAlarmsFile"> 
+ 		<constructor-arg index="0"><ref bean="forwardedAlarmsFile"/></constructor-arg>
+ 		<constructor-arg index="1"><value>true</value></constructor-arg>
+ 	</bean>    
+	
+ 	<bean id="nomAlarmForwarder" class="com.hp.uca.expert.alarm.OpenMediationAlarmForwarder"> 
+ 		<constructor-arg index="0"> 
+                         <value>openMediationAlarmForwarder</value> 
+ 		</constructor-arg> 
+ 		<constructor-arg index="1"> 
+ 			<value>ForwardedAlarmToAlarmManager2</value> 
+ 		</constructor-arg>   
+ 	</bean> 
+ 
+	<bean id="alarmForwarders" class="com.hp.uca.expert.alarm.internal.AlarmForwarders">
+	</bean>   	  --> 
+	
+
+ <!--      <bean name="forwardedAlarmsFile" class="java.io.File">
+            <constructor-arg index="0">
+                  <value>forwarded-alarms.xml</value>
+            </constructor-arg>
+      </bean>
+
+  
+      <bean id="alarmForwarder" class="com.hp.uca.expert.alarm.FileAlarmForwarder" depends-on="forwardedAlarmsFile"> 
+            <constructor-arg index="0"><ref bean="forwardedAlarmsFile"/></constructor-arg>
+           <constructor-arg index="1"><value>true</value></constructor-arg>
+     </bean> 
+      
+      <bean id="nomAlarmForwarder" class="com.hp.uca.expert.alarm.OpenMediationAlarmForwarder"> 
+            <constructor-arg index="0"> 
+                         <value>openMediationAlarmForwarder</value> 
+            </constructor-arg> 
+            <constructor-arg index="1"> 
+                  <value>ForwardedAlarmToAlarmManager2</value> 
+            </constructor-arg> 
+      </bean>  -->
+
+</beans>

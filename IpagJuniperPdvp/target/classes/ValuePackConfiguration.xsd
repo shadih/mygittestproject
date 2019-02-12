@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:tns="http://hp.com/uca/expert/config"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	jxb:version="2.0" targetNamespace="http://hp.com/uca/expert/config"
+	elementFormDefault="qualified">
+
+	<xs:element name="valuePackConfiguration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="scenarios" type="tns:scenarios" />
+				<xs:element name="mediationFlows" type="tns:mediationFlows"
+					minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required" />
+			<xs:attribute name="version" type="xs:string" use="required" />
+			<xs:attribute name="__tooltip" type="xs:string"
+				fixed="Configuration of a ValuePack" use="optional">
+				<xs:annotation>
+					<xs:appinfo>
+						<jxb:property fixedAttributeAsConstantProperty="true" />
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+
+	</xs:element>
+
+
+	<xs:complexType name="scenarios">
+		<xs:sequence>
+			<xs:element name="scenario" type="tns:scenarioPolicies"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="List of Scenarios defined in the Value Pack" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+
+	<xs:complexType name="scenarioPolicies">
+		<xs:sequence>
+			<xs:element name="automaticRefreshOnConfigurationChange"
+				type="xs:boolean" minOccurs="0" default="false">
+			</xs:element>
+			
+			<xs:element name="actionRetractedAutomaticallyWhenCompleted"
+				type="xs:boolean" minOccurs="0" default="true">
+			</xs:element>
+
+			<xs:element name="alarmEligibilityPolicy" type="xs:string"
+				minOccurs="0" default="true">
+			</xs:element>
+			<xs:element name="asyncActionPeriod" type="xs:long"
+				minOccurs="0" default="1000" />
+			<xs:element name="clockTypeMode" type="tns:clockMode"
+				minOccurs="0" default="NORMAL" />
+			<xs:element name="eligibleForBroadcast" type="xs:boolean"
+				minOccurs="0" default="true" />
+			<xs:element name="filterFile" type="xs:string" />
+			<xs:element name="filterTagsFile" type="xs:string" minOccurs="0" />
+			<xs:element name="mapperFile" type="xs:string" minOccurs="0" />
+			<xs:element name="fireAllRulePeriod" type="xs:long"
+				minOccurs="0" default="1000" />
+			<xs:element name="fireAllRulesDuringResynchronization"
+				type="xs:boolean" default="false" minOccurs="0" />
+			<xs:element name="fireAllRulesPolicy" type="tns:fireAllRulesPolicy"
+				default="WATCHDOG" />
+			<xs:element name="garbageCollectionPeriod" type="xs:long"
+				minOccurs="0" default="10000" />
+			<xs:element name="globals" type="tns:globals" />
+			<xs:element name="processingMode" type="tns:eventProcessingMode"
+				default="CLOUD" />
+			<xs:element name="rulesFiles" type="tns:rulesFiles" />
+			<xs:element name="tickPeriod" type="xs:long" minOccurs="0"
+				default="30000" />
+			<xs:element name="customLifeCycleClass" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="customInitializationClass" type="xs:string"
+				minOccurs="0" />				
+			<xs:element name="compressionMode" type="xs:boolean"
+				minOccurs="0" default="false" />
+			<xs:element name="compressionPeriod" type="xs:long"
+				minOccurs="0" default="1000" />
+			<xs:element name="retractOnResyncPolicy" type="tns:retractOnResyncPolicy"
+				default="PER_FLOW" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required" />
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Scenario Configuration" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_actionRetractedAutomaticallyWhenCompleted"
+			type="xs:string" fixed="true: completed actions are automatically retracted"
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_actionRetractedAutomaticallyWhenCompleted"
+			type="xs:string" fixed="true" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_alarmEligibilityPolicy"
+			type="xs:string" fixed="TODO the alarmEligibilityPolicy" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_alarmEligibilityPolicy"
+			type="xs:string" fixed="true" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_asyncActionPeriod"
+			type="xs:string" fixed="Period corresponding to Asynchronous Action Management (callbacks and status updated in rules). Value is in millisecond." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_asyncActionPeriod"
+			type="xs:string" fixed="1000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_clockTypeMode"
+			type="xs:string" fixed="Not Used" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_clockTypeMode"
+			type="xs:string" fixed="NORMAL" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_eligibleForBroadcast"
+			type="xs:string" fixed="Dispatcher send an incoming alarm only when the Scenario is eligible to broadcast." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_eligibleForBroadcast"
+			type="xs:string" fixed="true" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_filterFile"
+			type="xs:string" fixed="Path of the Scenario Filter file, in the form: deploy/vp-2.0/scenario/filters.xml" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+
+		<xs:attribute name="__tooltip_mapperFile"
+			type="xs:string" fixed="Path of the Scenario Mapper file, in the form: deploy/vp-2.0/scenario/mapper.xml" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_fireAllRulePeriod"
+			type="xs:string" fixed="Period of FireAllRule. Linked to fireAllRulePolicy. Value is in millisecond." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_fireAllRulePeriod"
+			type="xs:string" fixed="1000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_fireAllRulesDuringResynchronization"
+			type="xs:string" fixed="Allows FireAllRules to be triggered during Resynchronization phase." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_fireAllRulesDuringResynchronization"
+			type="xs:string" fixed="false" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		
+
+		<xs:attribute name="__tooltip_fireAllRulesPolicy"
+			type="xs:string" fixed="Policy of the FireAllRule mechanism" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_fireAllRulesPolicy"
+			type="xs:string" fixed="WATCHDOG" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+
+		<xs:attribute name="__tooltip_garbageCollectionPeriod"
+			type="xs:string" fixed="Period between Garbage Collecting mechanism (retracting un-eligible Alarms, completed Actions, etc...). Value is in millisecond." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_garbageCollectionPeriod"
+			type="xs:string" fixed="10000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+			
+		<xs:attribute name="__tooltip_processingMode"
+			type="xs:string" fixed="Scenario's Processing mode. Changing this value may impact Rule integrity. It is no recommended to change this value in the GUI." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_processingMode"
+			type="xs:string" fixed="CLOUD" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		
+		<xs:attribute name="__tooltip_tickPeriod"
+			type="xs:string" fixed="Period corresponding to the TickFlag update in the Rule. Optional mechanism. Value is in millisecond." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_tickPeriod"
+			type="xs:string" fixed="30000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_customLifeCycleClass"
+			type="xs:string" fixed="Full Class name of the LifeCycle used to specifically enrich customized Alarms. See UCA development Guide for more information." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_customInitializationClass"
+			type="xs:string" fixed="Full Class name of the Scenario Initialization customization. See UCA development Guide for more information." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_compressionMode"
+			type="xs:string" fixed="Enable the Alarm Compression layer at Scenario's entry point. The Compression layer can save Rules processing when lot of AttributeValueChange or StateChange are received." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_compressionMode"
+			type="xs:string" fixed="false" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_compressionPeriod"
+			type="xs:string" fixed="Buffering Time Window of Compression layer. Compression will analyze and manage Alarms received within this timeframe. Value is in millisecond." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_compressionPeriod"
+			type="xs:string" fixed="1000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_retractOnResyncPolicy"
+			type="xs:string" fixed="Policy for retracting objects in Working Memory when resynchronizing a mediation flow. Value can be: NONE, PER_FLOW, or ALL." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_retractOnResyncPolicy"
+			type="xs:string" fixed="PER_FLOW" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="globals">
+		<xs:sequence>
+			<xs:element name="global" type="tns:global" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="List of Global Beans that will be available from the Scenario Rules."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="global">
+		<xs:sequence>
+			<xs:element name="key" type="xs:string" />
+			<xs:element name="value" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Beans that is available from the Scenario Rules." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+
+		<xs:attribute name="__tooltip_key" type="xs:string"
+			fixed="The name of the Bean defined in the context.xml file." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_value" type="xs:string"
+			fixed="The name of the global variable as defined in the Rules of the Scenario"
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+
+	</xs:complexType>
+
+	<xs:complexType name="rulesFiles">
+		<xs:sequence>
+			<xs:element name="rulesFile" type="tns:rulesFile"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="List of Rules Files for the Scenario" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="rulesFile">
+		<xs:sequence>
+			<xs:element name="filename" type="xs:string" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="paramsFilename" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="ruleFileType" type="tns:ruleFileType" />
+		</xs:sequence>
+        <xs:attribute name="disabledAtStartup" type="xs:boolean" default="false"/>
+        
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Parameters of a Scenario's Rules File." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_filename" type="xs:string"
+			fixed="File path of the Rules File in the form: file:./deploy/vp-2.0/scenario/Rules.drl"
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_name" type="xs:string"
+			fixed="Name representing this Rules File" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_paramsFilename" type="xs:string"
+			fixed="TODO File path of the Rules File in the form: file:./deploy/vp-2.0/scenario/Rules.drl"
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_ruleFileType" type="xs:string"
+			fixed="Type of the Rules Files" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+        <xs:attribute name="__tooltip_disabledAtStartup" type="xs:string"
+            fixed="The rules defined in this file will not be active at Scenario startUp. Activation is explicitly required" use="optional">
+            <xs:annotation>
+                <xs:appinfo>
+                    <jxb:property fixedAttributeAsConstantProperty="true" />
+                </xs:appinfo>
+            </xs:annotation>
+        </xs:attribute>      
+        <xs:attribute name="__default_disabledAtStartup" type="xs:string"
+            fixed="false" use="optional">
+            <xs:annotation>
+                <xs:appinfo>
+                    <jxb:property fixedAttributeAsConstantProperty="true" />
+                </xs:appinfo>
+            </xs:annotation>
+        </xs:attribute>
+          
+		<xs:attribute name="__default_ruleFileType" type="xs:string"
+			fixed="DRL" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="mediationFlows">
+		<xs:sequence>
+			<xs:element name="mediationFlow" type="tns:mediationFlow"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="List of Mediation Flows for the ValuePack." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="mediationFlow">
+		<xs:sequence>
+			<xs:element name="flowCreation" type="tns:actionFlow"
+				minOccurs="0" />
+			<xs:element name="flowDeletion" type="tns:actionFlow"
+				minOccurs="0" />
+			<xs:element name="flowResynchronization" type="tns:actionFlow" />
+			<xs:element name="flowStatus" type="tns:actionFlow" />
+		</xs:sequence>
+    	<xs:attribute name="automaticStart" type="xs:boolean" use="optional" default="true"/>
+		<xs:attribute name="flowNameKey" type="xs:string" use="required" />
+		<xs:attribute name="actionReference" type="xs:string"
+			use="required" />
+		<xs:attribute name="name" type="xs:string" use="required" />
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Parameters of a Mediation Flow." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_automaticStart"
+			type="xs:string" fixed="Boolean flag indicating whether to automatically start the mediation flow when the value pack is started or not." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_automaticStart"
+			type="xs:string" fixed="true" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_name"
+			type="xs:string" fixed="Name of the Mediation Flow" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>		
+		<xs:attribute name="__tooltip_flowNameKey"
+			type="xs:string" fixed="Name of the parameter corresponding to the flowName to add in the Action command. The Madiation Channel Adapter will use this parameter to name the Flow" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_flowNameKey"
+			type="xs:string" fixed="flowName" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		
+		<xs:attribute name="__tooltip_actionReference"
+			type="xs:string" fixed="Action Reference parameter to route the Mediation Flows Action to the corresponding Mediation Channel Adapter" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__dynamicList_actionReference"
+			type="xs:string" fixed="actionReferenceList" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>		
+	</xs:complexType>
+
+	<xs:complexType name="actionFlow">
+		<xs:sequence>
+			<xs:element name="actionParameter" type="tns:actionParameter"
+				nillable="true" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Parameters of a Mediation Flow for a Specific phase [Creation/Deletion/resynchronization/Status]. Check the Channel Adapter documentation for supported key/value pairs." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>		
+	</xs:complexType>
+
+	<xs:complexType name="actionParameter">
+		<xs:sequence>
+			<xs:element name="key" type="xs:string" />
+			<xs:element name="value" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Parameters of an Action used to manage a Mediation Flow. Check the Channel Adapter documentation for supported key/value pairs." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_key" type="xs:string"
+			fixed="Key of an Action parameter. Can be 'operation' or 'flowType'" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_value" type="xs:string"
+			fixed="Value of an Action parameter." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>		
+	</xs:complexType>
+
+
+	<xs:simpleType name="clockMode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NORMAL" />
+			<xs:enumeration value="PSEUDO" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="fireAllRulesPolicy">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EACH_ACCESS" />
+			<xs:enumeration value="WATCHDOG" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="retractOnResyncPolicy">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="PER_FLOW"/>
+			<xs:enumeration value="ALL"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="eventProcessingMode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="STREAM" />
+			<xs:enumeration value="CLOUD" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ruleFileType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DRL" />
+			<xs:enumeration value="XDRL" />
+			<xs:enumeration value="BRL" />
+			<xs:enumeration value="PKG" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
+

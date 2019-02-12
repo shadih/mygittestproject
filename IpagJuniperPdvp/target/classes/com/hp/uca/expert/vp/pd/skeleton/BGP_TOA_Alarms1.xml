@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<Alarms xmlns="http://hp.com/uca/expert/x733Alarm">
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>1</identifier>
+		<originatingManagedEntity>DEVICE 8.8.0.188</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="1.1.1.1" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/12.122.123.157" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;CRCYNVAANX3&gt; Neighbor=&lt;abc&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="CRCYNVAANX3" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="nv1" /> 
+		</customFields>		
+	</AlarmCreationInterface>
+<!--  	    
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>2</identifier>
+		<originatingManagedEntity>DEVICE 8.8.0.189</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="148.0.131.168" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/148.0.131.168" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;xyz&gt; Neighbor=&lt;abc&gt;" name="component" /> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="8.8.0.189" /> 
+			<customField name="deviceLevelExists" value="false" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="nv1" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>3</identifier>
+		<originatingManagedEntity>DEVICE 8.8.0.188</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="148.0.131.168" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/148.0.131.168" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;CRCYNVAANX3&gt; Neighbor=&lt;CRCYNVAAB79&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="CRCYNVAANX3" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="nv1" />
+			<customField name="deviceSubRole" value="" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>5</identifier>
+		<originatingManagedEntity>DEVICE 12.80.0.218</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="143.0.24.74" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/143.0.24.74" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;CRCYNVMA55W&gt; Neighbor=&lt;CGSVLFLANX81&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="CRCYNVMA55W" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="AR" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>6</identifier>
+		<originatingManagedEntity>DEVICE 143.0.24.74</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:38</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="12.80.0.218" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/12.80.0.218" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;CGSVLFLANX81&gt; Neighbor=&lt;CRCYNVMA55W&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="CGSVLFLANX81" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="BR" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>7</identifier>
+		<originatingManagedEntity>DEVICE 10.204.80.210</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="12.123.80.133" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/12.123.80.133" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;CIENA NTE&gt; deviceModel=&lt;LE311V&gt; BGP Local=&lt;SNJSCAHUK03&gt; Neighbor=&lt;CORLDFL32S2O&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="SNJSCAHUK03" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="CE" /> 
+			<customField name="deviceType" value="CIENA NTE" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>8</identifier>
+		<originatingManagedEntity>DEVICE 12.123.80.133</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:38</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="10.204.80.210" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/10.0.38.68" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;CORLDFL32S2O&gt; Neighbor=&lt;SNJSCAHUK03&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="CORLDFL32S2O" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="AR" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>9</identifier>
+		<originatingManagedEntity>DEVICE 8.8.0.188</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="10.0.38.121" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/10.0.38.121" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;CRCYNVAANX3&gt; Neighbor=&lt;ORLDFLMA61Z&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="CRCYNVAANX3" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="nv1" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>10</identifier>
+		<originatingManagedEntity>DEVICE 10.0.38.121</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50004/1/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="7" /> 
+			<customField name="reason_code" value="" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/7" /> 
+			<customField name="EventKey" value="50004/1/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="10.0.38.121" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="nv1" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>11</identifier>
+		<originatingManagedEntity>DEVICE 12.82.118.4</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="12.80.72.76" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/12.80.72.76" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;VR1&gt; deviceModel=&lt;JUNIPER QFX5100-96S&gt; BGP Local=&lt;OKYOK301VR1&gt; Neighbor=&lt;RLGHNCMAPL9&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="OKYOK301VR1" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="VR1" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>12</identifier>
+		<originatingManagedEntity>PPORT 12.82.118.4/7/1/0</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/1</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.6.3.1.1.5" /> 
+			<customField name="gtrap_no" value="2" /> 
+			<customField name="strap_no" value="0" /> 
+			<customField name="reason_code" value="6414" /> 
+			<customField name="EventName" value=".1.3.6.1.6.3.1.1.5/2/0/6414" /> 
+			<customField name="EventKey" value="50003/100/1"/> 
+			<customField value="deviceType=&lt;VR1&gt; deviceModel=&lt;JUNIPER QFX5100-96S&gt;" name="component" /> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="OKYOK301VR1" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="VR1" /> 
+			<customField name="remoteDeviceType" value="crs" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>13</identifier>
+		<originatingManagedEntity>PPORT 12.82.118.4/0/0/0</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/1</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.6.3.1.1.5" /> 
+			<customField name="gtrap_no" value="2" /> 
+			<customField name="strap_no" value="0" /> 
+			<customField name="reason_code" value="6415" /> 
+			<customField name="EventName" value=".1.3.6.1.6.3.1.1.5/2/0/6415" /> 
+			<customField name="EventKey" value="50003/100/1"/> 
+			<customField value="deviceType=&lt;VR1&gt; deviceModel=&lt;JUNIPER QFX5100-96S&gt;" name="component" /> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="OKYOK301VR1" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="VR1" /> 
+			<customField name="remoteDeviceType" value="crs" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>15</identifier>
+		<originatingManagedEntity>DEVICE 12.82.118.12</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="12.80.72.76" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/12.80.72.76" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;VR1&gt; deviceModel=&lt;JUNIPER QFX5100-96S&gt; BGP Local=&lt;TLSOK301VR1&gt; Neighbor=&lt;RLGHNCMAPL9&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="TLSOK301VR1" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="VR1" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>16</identifier>
+		<originatingManagedEntity>PPORT 12.82.118.12/0/0/0</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/1</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.6.3.1.1.5" /> 
+			<customField name="gtrap_no" value="2" /> 
+			<customField name="strap_no" value="0" /> 
+			<customField name="reason_code" value="1" /> 
+			<customField name="EventName" value=".1.3.6.1.6.3.1.1.5/2/0/1" /> 
+			<customField name="EventKey" value="50003/100/1"/> 
+			<customField value="deviceType=&lt;VR1&gt; deviceModel=&lt;JUNIPER QFX5100-96S&gt;" name="component" /> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="TLSOK301VR1" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="VR1" /> 
+			<customField name="remoteDeviceType" value="crs" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>17</identifier>
+		<originatingManagedEntity>PPORT 12.82.118.12/11/0/0</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/1</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.6.3.1.1.5" /> 
+			<customField name="gtrap_no" value="2" /> 
+			<customField name="strap_no" value="0" /> 
+			<customField name="reason_code" value="2" /> 
+			<customField name="EventName" value=".1.3.6.1.6.3.1.1.5/2/0/2" /> 
+			<customField name="EventKey" value="50003/100/1"/> 
+			<customField value="deviceType=&lt;VR1&gt; deviceModel=&lt;JUNIPER QFX5100-96S&gt;" name="component" /> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="TLSOK301VR1" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="VR1" /> 
+			<customField name="remoteDeviceType" value="crs" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>20</identifier>
+		<originatingManagedEntity>DEVICE 8.8.0.188</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="148.0.131.168" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/148.0.131.168" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;mismatch&gt; Neighbor=&lt;CB1MA305VR1&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="CRCYNVAANX3" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="nv1" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>21</identifier>
+		<originatingManagedEntity>DEVICE 150.0.0.185</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="148.0.131.168" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/148.0.131.168" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;SCRMCA0147W&gt; Neighbor=&lt;CB1MA305VR1&gt; Info" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="SCRMCA0147W" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="info1" value="this is info1" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="nv1" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>22</identifier>
+		<originatingManagedEntity>DEVICE 12.80.0.218</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="8.8.0.188" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/143.0.24.74" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;CRCYNVMA55W&gt; Neighbor=&lt;CRCYNVAANX3&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="CRCYNVMA55W" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="AR" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>23</identifier>
+		<originatingManagedEntity>DEVICE 143.0.24.74</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:38</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="8.8.0.188" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/12.80.0.218" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;CGSVLFLANX81&gt; Neighbor=&lt;CRCYNVAANX3&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="CGSVLFLANX81" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="BR" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>24</identifier>
+		<originatingManagedEntity>DEVICE 143.0.25.64</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="8.8.0.188" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/8.8.0.188" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-96S&gt; BGP Local=&lt;DYBHFLMBADM&gt; Neighbor=&lt;CRCYNVAANX3&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="DYBHFLMBADM" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="nv1" /> 
+			<customField name="deviceSubRole" value="MRR" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>25</identifier>
+		<originatingManagedEntity>DEVICE 148.0.131.168</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="143.0.25.64" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/143.0.25.64" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-48S&gt; BGP Local=&lt;CRCYNVAAB79&gt; Neighbor=&lt;DYBHFLMBADM&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="CRCYNVAAB79" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="nv1" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+	<AlarmCreationInterface>
+		<sourceIdentifier>ipag</sourceIdentifier>
+		<identifier>26</identifier>
+		<originatingManagedEntity>DEVICE 143.0.25.64</originatingManagedEntity>
+		<alarmType>COMMUNICATIONS_ALARM</alarmType>
+		<probableCause>50003/100/2</probableCause>
+		<perceivedSeverity>MAJOR</perceivedSeverity>
+		<alarmRaisedTime>2013-06-21T14:21:37</alarmRaisedTime>
+		<customFields>
+			<customField name="enterprise_id" value=".1.3.6.1.2.1.15.7" /> 
+			<customField name="gtrap_no" value="6" /> 
+			<customField name="strap_no" value="2" /> 
+			<customField name="reason_code" value="12.82.56.6" /> 
+			<customField name="EventName" value=".1.3.6.1.2.1.15.7/6/2/12.82.56.6" /> 
+			<customField name="EventKey" value="50003/100/2"/> 
+			<customField name="be_time" value="1371824497" /> 
+			<customField value="deviceType=&lt;nv1&gt; deviceModel=&lt;JUNIPER QFX5100-96S&gt; BGP Local=&lt;DYBHFLMBADM&gt; Neighbor=&lt;LTRAR301VR1&gt;" name="component" /> 
+			<customField name="isHealthCheckAlarm" value="false" /> 
+			<customField name="deviceName" value="DYBHFLMBADM" /> 
+			<customField name="deviceLevelExists" value="true" /> 
+			<customField name="nodeType" value="PE" /> 
+			<customField name="deviceType" value="nv1" /> 
+			<customField name="deviceSubRole" value="MRR" /> 
+		</customFields>		
+	</AlarmCreationInterface>    
+
+-->
+
+
+</Alarms>
