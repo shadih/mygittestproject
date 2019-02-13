@@ -1,0 +1,13 @@
+{			
+			"avIfrStartSerialId" 	: 1,
+			"avIfrAsiStartSerialId" : 1,
+			"serialIdLocation"		: log,
+			"dbQsize"				: 10000,
+			"rowsRetLimit"			: 10,
+			"sleepBetweenQueries"	: 5000,
+			"UEB_batchSize"			: 1024,
+			"UEB_batchMaxAgeMs"		: 1000,
+			"UEB_compression"		: "true",
+			"RUBYNFO_UEB_LOG_FILE"	: "/gcfp/www/current/NFOToUEB/logs/RUBYNFO_UEB.log",
+		"UEBHealthAlarmFrequency": 900
+}
