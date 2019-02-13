@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uca:Alarms xmlns:uca="http://hp.com/uca/expert/x733Alarm" xmlns="http://hp.com/uca/expert/x733Alarm">
+
+<uca:AlarmCreationInterface>
+	<uca:sourceIdentifier>ipag</uca:sourceIdentifier>
+	<uca:identifier>TUNNEL-110.144.0.137/PE26_PE1_B_2_1_1_BYPASS_TRIGGER</uca:identifier>
+	<uca:originatingManagedEntity>TUNNEL 10.144.0.137/PE26_PE1_B_2_1_1_BYPASS</uca:originatingManagedEntity>
+      <originatingManagedEntityStructure>
+          <classInstance class="TUNNEL" instance="10.144.0.137/PE26_PE1_B_2_1_1_BYPASS"/>
+      </originatingManagedEntityStructure>
+      <alarmType>COMMUNICATIONS_ALARM</alarmType>
+      <probableCause>Remote CCM timeout Juniper ERROR TRIGGER,</probableCause>
+      <perceivedSeverity>MAJOR</perceivedSeverity>
+      <networkState>NOT_CLEARED</networkState>
+      <operatorState>NOT_ACKNOWLEDGED</operatorState>
+      <problemState>NOT_HANDLED</problemState>
+     <specificProblem>SPECIFIC_PROBLEM</specificProblem>
+      <additionalText>ADDITIONAL_TEXT</additionalText>
+      <notificationIdentifier>123</notificationIdentifier>
+      <customFields>   
+      <customField name="EventKey" value="50004/1/9"/>
+       <uca:customField value="CIENA NTE" name="remote_device_type"/>
+      <customField name="device_type" value="JUNIPER MX SERIES"/> 
+      <customField name="enterprise_id" value=".123"/>
+      
+      <customField name="alert-id" value="123"/> 
+         <customField name="domain" value="VPLS-PE"/>
+         <customField name="classification" value="VPLS-CFO"/>
+         <customField name="strap_no" value="2102"/>
+          <customField name="reason_code" value="VPLS-PE"/>
+         <customField name="reason" value="VPLS-PE"/>
+         <customField name="EventName" value=".143.0.68.226/0/0/3/SNJSCA02CA1_2821-DC_CISCO 2800 SERIES"/>
+         <customField name="fe_time_stamp" value="1378320363"/>
+         <customField name="be_time_stamp" value="1378320363"/>       
+         <customField name="component"
+			value="ae51/10.1.188.50"/>
+<!-- 			end_lag_id/end_lag_ip  ae77/10.1.182.30 then start_lag_id/start_lag_ip  ae77/10.1.182.30-->
+         <customField name="SeqNumber" value="222222222"/>
+         <customField name="isHealthCheckAlarm" value="false"/>
+      </customFields>
+</uca:AlarmCreationInterface>
+</uca:Alarms>
+
+
+ 

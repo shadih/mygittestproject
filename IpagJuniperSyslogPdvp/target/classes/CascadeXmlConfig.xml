@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CascadePolicies>          
+<cascadeTargets>
+	<cascadeTarget name="JUNIPER_COMPLETION">
+		<enableCascading>true</enableCascading> 
+		<vpName>IpagJuniperES</vpName>
+		<scenarioName>IpagJuniperES.JuniperCompletion</scenarioName>
+		<version>0.4</version>  
+		<eventNames>       
+			<eventName>50003/100/1</eventName> 
+			<eventName>50003/100/12</eventName> 
+			<eventName>50003/100/13</eventName> 
+			<eventName>50003/100/16</eventName> 
+			<eventName>50003/100/6</eventName> 
+			<eventName>50003/100/7</eventName> 
+			<eventName>50003/100/1</eventName>   
+		</eventNames>   
+	</cascadeTarget>
+	<cascadeTarget name="NTDTICKET_CORRELATION">
+		<enableCascading>true</enableCascading> 
+		<vpName>IpagJuniperES</vpName>
+		<scenarioName>IpagJuniperES.NTDTicketCorrelation</scenarioName>
+		<version>0.4</version>
+		<eventNames>       
+			<eventName>50003/100/1</eventName>   
+			<eventName>50002/100/21</eventName> 
+		</eventNames>   
+	</cascadeTarget>
+
+        <cascadeTarget name="LACPTIMEOUT_ENRICHMENT">
+                <enableCascading>true</enableCascading>
+                <vpName>IpagJuniperES</vpName>
+                <scenarioName>IpagJuniperES.LACPTimeout</scenarioName>
+                <version>0.4</version>
+                <eventNames>
+                        <eventName>50003/100/24</eventName>
+                </eventNames>
+        </cascadeTarget>
+
+	<cascadeTarget name="JUNIPER_CFMPROCESSING">
+		<enableCascading>true</enableCascading> 
+		<vpName>IpagJuniperES</vpName>
+		<scenarioName>IpagJuniperES.CFMProcessing</scenarioName>
+		<version>0.4</version>
+		<eventNames>       
+			<eventName>50003/100/1</eventName>   
+		</eventNames>   
+	</cascadeTarget>
+	<cascadeTarget name="JUNIPER_VRFPROCESSING">
+		<enableCascading>true</enableCascading> 
+		<vpName>IpagJuniperES</vpName>
+		<scenarioName>IpagJuniperES.VRFProcessing</scenarioName>
+		<version>0.4</version>
+		<eventNames>       
+			<eventName>50003/100/1</eventName>      
+		</eventNames>   
+	</cascadeTarget>
+	<cascadeTarget name="CIENA">
+		<enableCascading>true</enableCascading> 
+		<vpName>CienaVP</vpName>
+		<scenarioName>CienaVP.cienaScenario</scenarioName>
+		<version>1.0</version>
+		<eventNames>       
+			<eventName>50001/100/61</eventName> 
+			<eventName>50001/100/62</eventName> 
+			<eventName>50001/100/63</eventName> 
+			<eventName>50001/100/64</eventName> 
+			<eventName>50001/100/65</eventName>
+			<eventName>50002/100/21</eventName> 
+		</eventNames>   
+	</cascadeTarget>
+	<cascadeTarget name="JUNIPER_LINKDOWN">
+		<enableCascading>true</enableCascading> 
+		<vpName>ipagJuniperPdvp</vpName>
+		<scenarioName>com.hp.uca.expert.vp.pd.ProblemDetection</scenarioName>
+		<version>0.6</version>
+		<eventNames>       
+			<eventName>50003/100/1</eventName> 
+			<eventName>50002/100/1</eventName> 
+			<eventName>50002/100/19</eventName> 
+			<eventName>50002/100/21</eventName> 
+			<eventName>50004/1/10</eventName> 
+			<eventName>50003/100/23</eventName> 
+		</eventNames>    
+
+</cascadeTarget>
+   	<cascadeTarget name="JUNIPER_lINK_DOWN_PD">          
+		<enableCascading>true</enableCascading> 
+		<vpName>ipagJuniperPdvp</vpName>
+		<scenarioName>com.hp.uca.expert.vp.pd.ProblemDetection</scenarioName>
+		<version>0.6</version> 
+   		<eventNames>       
+   			<eventName>50003/100/1</eventName>    
+            <eventName>50002/100/1</eventName>
+            <eventName>50002/100/19</eventName>
+            <eventName>50002/100/21</eventName>
+            <eventName>50004/100/10</eventName>
+            <eventName>50003/100/23</eventName>
+            <eventName>50002/100/21</eventName>  
+   		</eventNames>     
+   	</cascadeTarget>
+        <cascadeTarget name="PTP_MPT">
+                <enableCascading>true</enableCascading>
+                <vpName>CienaPdvp</vpName>
+                <scenarioName>com.hp.uca.expert.vp.pd.ProblemDetection</scenarioName>
+                <version>1.0</version>
+                <eventNames>
+                <eventName>50002/100/58916873</eventName>
+                <eventName>50004/2/58916876</eventName>
+                <eventName>50002/100/52</eventName>
+                <eventName>50001/100/61</eventName>
+                <eventName>50001/100/62</eventName>
+                <eventName>50001/100/63</eventName>
+                <eventName>50001/100/64</eventName>
+                <eventName>50001/100/65</eventName>
+                </eventNames>
+        </cascadeTarget>
+        <cascadeTarget name="JUNIPER_SYSLOG">
+                        <enableCascading>true</enableCascading>
+                       <vpName>ipagJuniperSyslogPdvp</vpName>
+                        <scenarioName>com.hp.uca.expert.vp.pd.ProblemDetection</scenarioName>
+                        <version>0.3</version>
+                <eventNames>
+                        <eventName>50001/100/61</eventName>
+                        <eventName>50001/100/62</eventName>
+                        <eventName>50001/100/63</eventName>
+                        <eventName>50001/100/64</eventName>
+                        <eventName>50001/100/65</eventName>
+                       <eventName>50002/100/58</eventName>
+                </eventNames>
+        </cascadeTarget>   
+</cascadeTargets>  
+</CascadePolicies> 

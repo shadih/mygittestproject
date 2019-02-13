@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://config.pd.vp.expert.uca.hp.com/"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.0"
+	targetNamespace="http://config.pd.vp.expert.uca.hp.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+	<xs:element name="ProblemPolicies">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="mainPolicy" type="MainPolicy"
+					minOccurs="1" maxOccurs="1" />
+				<xs:element name="problemPolicy" type="ProblemPolicy"
+					minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="__tooltip" type="xs:string"
+				fixed="Configuration of a Problem Detection value pack" use="optional">
+				<xs:annotation>
+					<xs:appinfo>
+						<jxb:property fixedAttributeAsConstantProperty="true" />
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="MainPolicy">
+		<xs:all>
+			<xs:element name="candidateVisibility" type="CandidateVisibility"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="transientFiltering" type="TransientFiltering"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="actions" type="Actions" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="troubleTicketActions" type="TroubleTicketActions"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="counterTotalNumberAlarms" type="CounterTotalNumberAlarms"
+				minOccurs="1" maxOccurs="1" />
+		</xs:all>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Configuration settings common to all problems defined in a Problem Detection Value Pack."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_counterTotalNumberAlarms"
+			type="xs:string" fixed="Configuration of the ProblemAlarm field representing the Total Number of Alarms." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_counterTotalNumberAlarms"
+			type="xs:string" fixed="Current" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+
+	<xs:complexType name="CandidateVisibility">
+		<xs:sequence>
+			<xs:element name="candidateVisibilityTimeMode" type="CandidateVisibilityTimeMode"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="candidateVisibilityTimeValue" type="xs:long"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="markCandidate" type="xs:boolean"
+				minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Configuration of 'Candidate' Alarms seen from the Network Management System Console."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_candidateVisibilityTimeMode"
+			type="xs:string" fixed="Configure how a Candidate Alarm is shown in the Network Management System, depending on other problem's TimeWindow." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_candidateVisibilityTimeMode"
+			type="xs:string" fixed="Max" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_candidateVisibilityTimeValue"
+			type="xs:string"
+			fixed="Used only when candidateVisibilityTimeMode is set to 'Value'. Indicates how long an alarm should be shown as a 'Candidate' in the Network Management System Console. Value is in millisecond."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_candidateVisibilityTimeValue"
+			type="xs:string" fixed="30000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_markCandidate" type="xs:string"
+			fixed="Indicates whether an alarm should be marked as a 'Candidate' in the Network Management System Console."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_markCandidate" type="xs:string"
+			fixed="true" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+	</xs:complexType>
+
+
+	<xs:complexType name="TransientFiltering">
+		<xs:sequence>
+			<xs:element name="transientFilteringEnabled" type="xs:boolean"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="transientFilteringDelay" type="xs:long"
+				minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Configuration of Transient Filtering feature. Wait before processing the Alarm, potentially cleared by the Network Management System."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_transientFilteringEnabled"
+			type="xs:string" fixed="Apply the Transient Filtering feature" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_transientFilteringEnabled"
+			type="xs:string" fixed="false" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_transientFilteringDelay"
+			type="xs:string"
+			fixed="Delay before processing a Transient Alarm. Value is in millisecond."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_transientFilteringDelay"
+			type="xs:string" fixed="5000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+	</xs:complexType>
+
+
+
+	<xs:complexType name="Actions">
+		<xs:sequence>
+			<xs:element name="defaultActionScriptReference" type="xs:string"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="action" type="Action" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Configuration of Supported Actions Factories" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_defaultActionScriptReference"
+			type="xs:string"
+			fixed="Unique Action reference (see ActionRegistry configuration) defining the routing information of a script-based Action. See Exec Channel Adapter."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__dynamicList_defaultActionScriptReference"
+			type="xs:string" fixed="actionReferenceList" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>			
+	</xs:complexType>
+
+	<xs:complexType name="Action">
+		<xs:all>
+			<xs:element name="actionReference" type="xs:string"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="actionClass" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="attributeUsedForKeyDuringRecognition"
+				type="xs:string" minOccurs="1" maxOccurs="1" />
+			<xs:element name="attributeUsedForKeyPbAlarmCreation"
+				type="xs:string" minOccurs="1" maxOccurs="1" />
+			<xs:element name="booleans" type="Booleans" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element name="strings" type="Strings" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element name="longs" type="Longs" minOccurs="0"
+				maxOccurs="1" />
+		</xs:all>
+		<xs:attribute name="name" use="required" type="xs:string" />
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Container for attributes defining the actions for a set of alarms."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_name" type="xs:string"
+			fixed="Name of the Action container. Usually matches the 'sourceIdentifier' field of alarms."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_actionReference" type="xs:string"
+			fixed="Unique Action reference (see ActionRegistry configuration) defining the routing information of an Action"
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__dynamicList_actionReference"
+			type="xs:string" fixed="actionReferenceList" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>				
+		<xs:attribute name="__tooltip_actionClass" type="xs:string"
+			fixed="The class implementing the SupportedAction interface which describes the methods needed to support any Action on alarms."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_attributeUsedForKeyDuringRecognition"
+			type="xs:string"
+			fixed="The Custom Field Name of the Alarm containing the information to identify that a ProblemAlarm is generated by the Problem Detection Framework."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_attributeUsedForKeyPbAlarmCreation"
+			type="xs:string"
+			fixed="The Custom Field of the ProblemAlarm that will contain information about the problem, as seen from the Network Management System. Used as argument during ProblemAlarm creation."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="TroubleTicketActions">
+		<xs:sequence>
+			<xs:element name="troubleTicketAction" type="TroubleTicketAction"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Configuration of Supported Trouble Ticket Actions Factories"
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="TroubleTicketAction">
+		<xs:all>
+			<xs:element name="actionReference" type="xs:string"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="actionClass" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="booleans" type="Booleans" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element name="strings" type="Strings" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element name="longs" type="Longs" minOccurs="0"
+				maxOccurs="1" />
+		</xs:all>
+		<xs:attribute name="name" use="required" type="xs:string" />
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Container for attributes defining the trouble ticket actions for a set of alarms"
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_name" type="xs:string"
+			fixed="Name of the Action container. Usually matches the Filter Tag defined in the Filter Configuration."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_actionReference" type="xs:string"
+			fixed="Unique Action reference (see ActionRegistry configuration) defining the routing information of a Trouble Ticket Action"
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_actionClass" type="xs:string"
+			fixed="The class implementing the SupportedTroubleTicketActions interface which describes the methods needed to support any Action on alarms."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="ProblemPolicy">
+		<xs:all>
+			<xs:element name="problemAlarm" type="ProblemAlarm"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="troubleTicket" type="TroubleTicket"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="groupTickFlagAware" type="xs:boolean"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="sameGroupForAllProblemEntities" type="xs:boolean"
+				minOccurs="0" maxOccurs="1" nillable="false" default="false"  />				
+			<xs:element name="timeWindow" type="TimeWindow" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="booleans" type="Booleans" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element name="strings" type="Strings" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element name="longs" type="Longs" minOccurs="0"
+				maxOccurs="1" />
+		</xs:all>
+		<xs:attribute name="name" use="required" type="xs:string" />
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Configuration settings specific to each problem defined in a Problem Detection Value Pack."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_name" type="xs:string"
+			fixed="Name of the Problem. A TopFilter with the same name is defined in the Filter Configuration."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__dynamicList_name"
+			type="xs:string" fixed="topFilterList" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>			
+		<xs:attribute name="__tooltip_groupTickFlagAware" type="xs:string"
+			fixed="Indicates that at regular tick intervals (see Scenario configuration), the Problem Detection Value Pack, if customized for that,  will execute some user code performed on the Group object."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_groupTickFlagAware" type="xs:string"
+			fixed="false" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		
+		<xs:attribute name="__tooltip_sameGroupForAllProblemEntities" type="xs:string"
+			fixed="Groups all alarms that have at least one problemEntity matching. By default, when set to false, each different problemEntity will lead to a specific group."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_sameGroupForAllProblemEntities" type="xs:string"
+			fixed="false" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>		
+	</xs:complexType>
+
+	<xs:complexType name="ProblemAlarm">
+		<xs:sequence>
+			<xs:element name="delayForProblemAlarmCreation" type="xs:long"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="delayForProblemAlarmClearance" type="xs:long"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Configuration of 'ProblemAlarm' Alarms." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_delayForProblemAlarmCreation"
+			type="xs:string"
+			fixed="Delay applied before creating the ProblemAlarm. Value is in millisecond."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_delayForProblemAlarmCreation"
+			type="xs:string" fixed="2000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_delayForProblemAlarmClearance"
+			type="xs:string"
+			fixed="Delay applied before clearance of the ProblemAlarm. Value is in millisecond."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_delayForProblemAlarmClearance"
+			type="xs:string" fixed="0" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+	</xs:complexType>
+
+	<xs:complexType name="TroubleTicket">
+		<xs:sequence>
+			<xs:element name="automaticTroubleTicketCreation" type="xs:boolean"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="propagateTroubleTicketToSubAlarms" type="xs:boolean"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="propagateTroubleTicketToProblemAlarm"
+				type="xs:boolean" minOccurs="1" maxOccurs="1" />
+			<xs:element name="delayForTroubleTicketCreation" type="xs:long"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string"
+			fixed="Configuration of Trouble Ticket feature" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+		<xs:attribute name="__tooltip_automaticTroubleTicketCreation"
+			type="xs:string"
+			fixed="Automates the creation of a trouble ticket once a ProblemAlarm is created."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_automaticTroubleTicketCreation"
+			type="xs:string" fixed="false" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_propagateTroubleTicketToSubAlarms"
+			type="xs:string"
+			fixed="All SubAlarms (of the ProblemAlarm), are associated to the trouble ticket linked with the ProblemAlarm."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_propagateTroubleTicketToSubAlarms"
+			type="xs:string" fixed="false" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_propagateTroubleTicketToProblemAlarm"
+			type="xs:string"
+			fixed="If one SubAlarm has a trouble ticket, the ProblemAlarm will be linked to this trouble ticket.
+"
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_propagateTroubleTicketToProblemAlarm"
+			type="xs:string" fixed="false" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_delayForTroubleTicketCreation"
+			type="xs:string"
+			fixed="Delay after the creation of a Problem Alarm, before the associated trouble ticket is created. Value is in millisecond."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_delayForTroubleTicketCreation"
+			type="xs:string" fixed="10000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="TimeWindow">
+		<xs:sequence>
+			<xs:element name="timeWindowMode" type="TimeWindowMode"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element name="timeWindowBeforeTrigger" type="xs:long"
+				minOccurs="0" maxOccurs="1" />
+			<xs:element name="timeWindowAfterTrigger" type="xs:long"
+				minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string" fixed="Configuration of the TimeWindow"
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_timeWindowMode" type="xs:string"
+			fixed="Configuration of the Problem's TimeWindow. A TimeWindow is used to decide if an Alarm has to be part of a Group of Alarm depending on its alarmRaisedTime field." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_timeWindowMode" type="xs:string"
+			fixed="None" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_timeWindowBeforeTrigger"
+			type="xs:string"
+			fixed="Delay before the Trigger's alarmRaisedTime field to consider an Alarm as part of the Trigger's problem. Value is in millisecond."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_timeWindowBeforeTrigger"
+			type="xs:string" fixed="30000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_timeWindowAfterTrigger"
+			type="xs:string"
+			fixed="Delay after the Trigger's alarmRaisedTime field to consider an Alarm as part of the Trigger's problem. Value is in millisecond."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__default_timeWindowAfterTrigger"
+			type="xs:string" fixed="30000" use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+
+
+	</xs:complexType>
+
+
+	<xs:complexType name="Booleans">
+		<xs:sequence>
+			<xs:element name="boolean" type="booleanItem" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string" fixed="Configuration of Boolean parameters used during the ProblemDetection processing."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="booleanItem">
+		<xs:sequence>
+			<xs:element name="value" minOccurs="1" maxOccurs="1"
+				type="xs:boolean" />
+		</xs:sequence>
+		<xs:attribute name="key" use="required" type="xs:string" />
+		<xs:attribute name="__tooltip" type="xs:string" fixed="Boolean parameter used during the ProblemDetection processing."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_key" type="xs:string"
+			fixed="Information used to retrieve this parameter from ProblemDetection customization code." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_value" type="xs:string"
+			fixed="Value of this parameter. Automatically converted as Boolean java class instance." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="Strings">
+		<xs:sequence>
+			<xs:element name="string" type="StringItem" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string" fixed="Configuration of String parameters used during the ProblemDetection processing."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+
+	</xs:complexType>
+
+	<xs:complexType name="StringItem">
+		<xs:sequence>
+			<xs:element name="value" minOccurs="1" maxOccurs="1"
+				type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="key" use="required" type="xs:string" />
+		<xs:attribute name="__tooltip" type="xs:string" fixed="String parameter used during the ProblemDetection processing."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_key" type="xs:string"
+			fixed="Information used to retrieve this parameter from ProblemDetection customization code." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_value" type="xs:string"
+			fixed="Value of this parameter. Automatically converted as String java class instance." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="Longs">
+		<xs:sequence>
+			<xs:element name="long" type="LongItem" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="__tooltip" type="xs:string" fixed="Configuration of Long parameters used during the ProblemDetection processing."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="LongItem">
+		<xs:sequence>
+			<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:long" />
+		</xs:sequence>
+		<xs:attribute name="key" use="required" type="xs:string" />
+		<xs:attribute name="__tooltip" type="xs:string" fixed="Long parameter used during the ProblemDetection processing."
+			use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_key" type="xs:string"
+			fixed="Information used to retrieve this parameter from ProblemDetection customization code." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="__tooltip_value" type="xs:string"
+			fixed="Value of this parameter. Automatically converted as Long java class instance." use="optional">
+			<xs:annotation>
+				<xs:appinfo>
+					<jxb:property fixedAttributeAsConstantProperty="true" />
+				</xs:appinfo>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+
+	<xs:simpleType name="CandidateVisibilityTimeMode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Min" />
+			<xs:enumeration value="Max" />
+			<xs:enumeration value="Value" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="TimeWindowMode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None" />
+			<xs:enumeration value="Trigger" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="CounterTotalNumberAlarms">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Current" />
+			<xs:enumeration value="All" />
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>
+
+
